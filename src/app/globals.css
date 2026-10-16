@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --color-fondo: #faf6ee;
+  --color-superficie: #efe6d6;
+  --color-primario: #7d8f78;
+  --color-primario-oscuro: #5e6e5a;
+  --color-texto: #2f2d2a;
+  --color-acento: #b9694b;
+}
+
+@theme inline {
+  --color-background: var(--color-fondo);
+  --color-foreground: var(--color-texto);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primario) 35%, transparent);
+}
+
+.container-page {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.prose-editorial p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.prose-editorial h2,
+.prose-editorial h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-editorial ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.prose-editorial ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+
+.prose-editorial li + li {
+  margin-top: 0.35rem;
+}
