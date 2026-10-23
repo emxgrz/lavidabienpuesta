@@ -13,7 +13,6 @@ import { ProductCard } from "@/components/product-card";
 import { RelatedArticles } from "@/components/related-articles";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { TableOfContents } from "@/components/toc";
 import { articles, getArticleBySlug, getCategoryBySlug } from "@/content/articles";
 import { articleFrontmatterSchema } from "@/lib/content";
 import { siteConfig } from "@/config/site";
@@ -113,11 +112,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     },
   });
 
-  const headings = article.contenido
-    .split("\n")
-    .filter((line) => line.startsWith("## "))
-    .map((line) => ({ id: line.replace(/^##\s+/, "").toLowerCase().replace(/[^a-z0-9]+/g, "-"), label: line.replace(/^##\s+/, "") }));
-
   const articleUrl = absoluteUrl(`/${article.categoria}/${article.slug}/`);
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -210,8 +204,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <section className="prose-editorial max-w-none text-[1.02rem] leading-8">
               {content}
             </section>
-
-            {headings.length > 0 ? <TableOfContents headings={headings} /> : null}
 
             <AuthorBox />
 

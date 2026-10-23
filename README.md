@@ -170,8 +170,8 @@ Las variables se leen en `src/config/site.ts`.
 │  │  ├─ author-box.tsx
 │  │  ├─ breadcrumbs.tsx
 │  │  ├─ callout.tsx                # Bloque MDX <Callout type="info|warning">
+│  │  ├─ contact-form.tsx           # Formulario de contacto (mailto)
 │  │  ├─ json-ld.tsx                # Datos estructurados schema.org
-│  │  ├─ toc.tsx                    # Índice generado desde los H2
 │  │  ├─ related-articles.tsx
 │  │  ├─ copyright-year.tsx         # Año automático del pie
 │  │  ├─ pinterest-save-button.tsx  # Reservado, sin uso actualmente
@@ -253,7 +253,6 @@ Es la red de seguridad para no publicar metadatos incompletos.
 
 ### Convenciones de contenido
 
-- El **primer `##`** de cada artículo alimenta el índice automático (`TableOfContents`).
 - Usa `##` y `###`, nunca `#` (el H1 lo pone la plantilla).
 - Los artículos con enlaces de Amazon llevan `afiliado: true` y un bloque
   `<ProductCard asin="..." ... />` dentro del MDX. El aviso de afiliación se
@@ -414,7 +413,8 @@ la configuración.
 
 - [ ] **Borradores**: implementar el filtrado de `borrador: true` en portada,
       categorías, búsqueda y sitemap.
-- [ ] **Contacto**: la página muestra el correo; valorar formulario con validación.
+- [ ] **Contacto**: el formulario abre el cliente de correo del visitante. Valorar
+      envío directo desde servidor con SMTP o un proveedor transaccional.
 - [ ] **Analítica**: sin integración de métricas todavía.
 - [ ] **Tests**: no hay suite de pruebas configurada.
 
