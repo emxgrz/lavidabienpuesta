@@ -6,7 +6,15 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Sobre nosotros",
-  description: `La filosofía editorial de ${siteConfig.name} y cómo se eligen los productos.`,
+  description: `La filosofía editorial de ${siteConfig.name}: cómo seleccionamos los temas, los productos y las recomendaciones de hogar.`,
+  alternates: { canonical: "/sobre-nosotros/" },
+  openGraph: {
+    title: `Sobre nosotros | ${siteConfig.name}`,
+    description: `La filosofía editorial de ${siteConfig.name}: cómo seleccionamos los temas, los productos y las recomendaciones de hogar.`,
+    url: "/sobre-nosotros/",
+    type: "website",
+    images: ["/images/og-default.jpg"],
+  },
 };
 
 export default function AboutPage() {

@@ -8,6 +8,7 @@ import { ArticleCard } from "@/components/article-card";
 import { AuthorBox } from "@/components/author-box";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Callout } from "@/components/callout";
+import { JsonLd } from "@/components/json-ld";
 import { ProductCard } from "@/components/product-card";
 import { RelatedArticles } from "@/components/related-articles";
 import { SiteFooter } from "@/components/site-footer";
@@ -16,6 +17,7 @@ import { TableOfContents } from "@/components/toc";
 import { articles, getArticleBySlug, getCategoryBySlug } from "@/content/articles";
 import { articleFrontmatterSchema } from "@/lib/content";
 import { siteConfig } from "@/config/site";
+import { absoluteUrl } from "@/lib/seo";
 
 type ArticlePageProps = {
   params: Promise<{ categoria: string; slug: string }>;
@@ -26,23 +28,47 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { categoria, slug } = await params;
   const article = getArticleBySlug(slug);
+  const category = getCategoryBySlug(categoria);
 
-  if (!article) {
+  if (!article || !category) {
     return {};
   }
+
+  const articleUrl = `/${article.categoria}/${article.slug}/`;
+  const ogImage = {
+    url: article.imagenPrincipal,
+    width: 1600,
+    height: 900,
+    alt: article.imagenPrincipalAlt,
+  };
 
   return {
     title: article.titulo,
     description: article.descripcionSeo,
-    alternates: { canonical: `/${article.categoria}/${article.slug}/` },
+    keywords: article.etiquetas,
+    alternates: { canonical: articleUrl },
+    robots: article.borrador ? { index: false, follow: false } : undefined,
     openGraph: {
       type: "article",
       title: article.titulo,
       description: article.descripcionSeo,
-      url: `/${article.categoria}/${article.slug}/`,
+      url: articleUrl,
       siteName: siteConfig.name,
+      locale: "es_ES",
+      publishedTime: article.fechaPublicacion,
+      modifiedTime: article.fechaActualizacion ?? article.fechaPublicacion,
+      authors: [article.autor],
+      section: category.nombre,
+      tags: article.etiquetas,
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.titulo,
+      description: article.descripcionSeo,
+      images: [article.imagenPrincipal],
     },
   };
 }
@@ -92,8 +118,71 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     .filter((line) => line.startsWith("## "))
     .map((line) => ({ id: line.replace(/^##\s+/, "").toLowerCase().replace(/[^a-z0-9]+/g, "-"), label: line.replace(/^##\s+/, "") }));
 
+  const articleUrl = absoluteUrl(`/${article.categoria}/${article.slug}/`);
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.titulo,
+    description: article.descripcionSeo,
+    image: [absoluteUrl(article.imagenPrincipal)],
+    datePublished: article.fechaPublicacion,
+    dateModified: article.fechaActualizacion ?? article.fechaPublicacion,
+    author: {
+      "@type": "Organization",
+      name: article.autor,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/icon-512.png"),
+        width: 512,
+        height: 512,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    articleSection: category.nombre,
+    keywords: article.etiquetas.join(", "),
+    inLanguage: "es-ES",
+    isAccessibleForFree: true,
+    wordCount: article.contenido.trim().split(/\s+/).length,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category.nombre,
+        item: absoluteUrl(`/${category.slug}/`),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.titulo,
+        item: articleUrl,
+      },
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main className="container-page py-10 md:py-14">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">

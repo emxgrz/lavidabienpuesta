@@ -3,11 +3,21 @@ import Link from "next/link";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Política de cookies",
   description:
     "Política de cookies de La Vida Bien Puesta: qué cookies se utilizan, base legal y cómo gestionarlas.",
+  alternates: { canonical: "/politica-de-cookies/" },
+  openGraph: {
+    title: "Política de cookies | La Vida Bien Puesta",
+    description:
+      "Qué cookies utiliza La Vida Bien Puesta, base legal y cómo gestionarlas desde el navegador.",
+    url: "/politica-de-cookies/",
+    type: "website",
+    images: ["/images/og-default.jpg"],
+  },
 };
 
 export default function CookiesPage() {
@@ -17,7 +27,7 @@ export default function CookiesPage() {
       <main className="container-page py-12">
         <article className="max-w-3xl space-y-5 leading-8 text-black/72">
           <h1 className="text-5xl font-semibold text-black">Política de cookies</h1>
-          <p className="text-sm text-black/55">Última actualización: 23 de octubre de 2026.</p>
+          <p className="text-sm text-black/55">Última actualización: 24 de octubre de 2026.</p>
 
           <h2 className="pt-4 text-2xl font-semibold text-black">1. Qué son las cookies</h2>
           <p>
@@ -84,7 +94,7 @@ export default function CookiesPage() {
           <h2 className="pt-4 text-2xl font-semibold text-black">7. Contacto</h2>
           <p>
             Para cualquier duda sobre esta política, escribe a{" "}
-            <strong>hola@lavidabienpuesta.com</strong>. Puedes consultar también la{" "}
+            <strong>{siteConfig.contactEmail}</strong>. Puedes consultar también la{" "}
             <Link className="underline decoration-black/30 underline-offset-4" href="/politica-de-privacidad/">
               política de privacidad
             </Link>

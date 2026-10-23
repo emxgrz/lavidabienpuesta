@@ -29,7 +29,7 @@ como cortesía y para poder rastrear su procedencia.
 | `article-vajilla.jpg` | <https://www.pexels.com/photo/14341977/> | Pexels |
 | `article-vajilla-pin.jpg`, `category-guias.jpg` | <https://www.pexels.com/photo/6794580/> | Kaboompics.com |
 | `category-orden.jpg` | <https://www.pexels.com/photo/33784616/> | American Cleaning Institute |
-| `category-decoracion.jpg` | <https://www.pexels.com/photo/29252369/> | Mateusz Pielech |
+| `category-decoracion.jpg`, `og-default.jpg` | <https://www.pexels.com/photo/29252369/> | Mateusz Pielech |
 | `category-ideas.jpg` | <https://www.pexels.com/photo/8287244/> | Ron Lach |
 | `article-vtopmart-cajas.jpg` | <https://www.pexels.com/photo/8580718/> | RDNE Stock project |
 | `article-vtopmart-cajas-pin.jpg` | <https://www.pexels.com/photo/8580745/> | RDNE Stock project |

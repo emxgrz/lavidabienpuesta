@@ -2,11 +2,21 @@ import type { Metadata } from "next";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Política de privacidad",
   description:
     "Política de privacidad de La Vida Bien Puesta conforme al RGPD y a la LOPDGDD: responsable, datos, finalidades, derechos y conservación.",
+  alternates: { canonical: "/politica-de-privacidad/" },
+  openGraph: {
+    title: "Política de privacidad | La Vida Bien Puesta",
+    description:
+      "Cómo trata La Vida Bien Puesta los datos personales conforme al RGPD y a la LOPDGDD.",
+    url: "/politica-de-privacidad/",
+    type: "website",
+    images: ["/images/og-default.jpg"],
+  },
 };
 
 export default function PrivacyPage() {
@@ -16,7 +26,7 @@ export default function PrivacyPage() {
       <main className="container-page py-12">
         <article className="max-w-3xl space-y-5 leading-8 text-black/72">
           <h1 className="text-5xl font-semibold text-black">Política de privacidad</h1>
-          <p className="text-sm text-black/55">Última actualización: 23 de octubre de 2026.</p>
+          <p className="text-sm text-black/55">Última actualización: 24 de octubre de 2026.</p>
 
           <p>
             Esta política explica qué datos personales trata La Vida Bien Puesta, con qué finalidad, durante
@@ -29,7 +39,7 @@ export default function PrivacyPage() {
           <p>
             <strong>Responsable:</strong> La Vida Bien Puesta.
             <br />
-            <strong>Correo electrónico:</strong> hola@lavidabienpuesta.com
+            <strong>Correo electrónico:</strong> {siteConfig.contactEmail}
           </p>
           <p>
             Los datos identificativos completos del responsable (nombre o denominación social, NIF y domicilio)
@@ -108,14 +118,24 @@ export default function PrivacyPage() {
             No se ceden datos a otros terceros, salvo obligación legal o requerimiento de una autoridad
             competente.
           </p>
+          <h2 className="pt-4 text-2xl font-semibold text-black">6. Enlaces de afiliado</h2>
           <p>
-            Cuando haces clic en un enlace de afiliado de Amazon, abandonas el Sitio y accedes a una web
-            gestionada por Amazon, que actúa como responsable independiente del tratamiento. El Sitio no
-            comparte tus datos personales con Amazon; la compra y el uso posterior de sus servicios se rigen
-            por su propia política de privacidad.
+            Algunos artículos del Sitio pueden incluir enlaces de afiliado, especialmente enlaces del Programa
+            de Afiliados de Amazon. Cuando un artículo contiene este tipo de enlaces, se indica de forma clara y
+            visible en el propio artículo, antes del contenido, mediante un aviso de afiliación.
+          </p>
+          <p>
+            Si haces clic en uno de estos enlaces, abandonas el Sitio y accedes a la web del comercio
+            correspondiente, que actúa como responsable independiente del tratamiento. El Sitio no comparte tus
+            datos personales con Amazon ni con otros comercios; la compra y el uso posterior de sus servicios se
+            rigen por su propia política de privacidad y de cookies.
+          </p>
+          <p>
+            La posible comisión que podamos recibir no tiene coste adicional para ti ni condiciona la selección
+            editorial de los productos.
           </p>
 
-          <h2 className="pt-4 text-2xl font-semibold text-black">6. Transferencias internacionales</h2>
+          <h2 className="pt-4 text-2xl font-semibold text-black">7. Transferencias internacionales</h2>
           <p>
             Algunos de los proveedores tecnológicos pueden estar ubicados en Estados Unidos o tratar datos fuera
             del Espacio Económico Europeo. En esos casos, las transferencias se amparan en las garantías
@@ -126,7 +146,7 @@ export default function PrivacyPage() {
             Puedes solicitar información adicional sobre estas garantías escribiendo a la dirección de contacto.
           </p>
 
-          <h2 className="pt-4 text-2xl font-semibold text-black">7. Tus derechos</h2>
+          <h2 className="pt-4 text-2xl font-semibold text-black">8. Tus derechos</h2>
           <p>
             Puedes ejercer en cualquier momento los siguientes derechos:
           </p>
@@ -140,7 +160,7 @@ export default function PrivacyPage() {
             <li><strong>Retirar el consentimiento:</strong> cuando el tratamiento se base en tu consentimiento.</li>
           </ul>
           <p>
-            Para ejercerlos, escribe a <strong>hola@lavidabienpuesta.com</strong> indicando el derecho que
+            Para ejercerlos, escribe a <strong>{siteConfig.contactEmail}</strong> indicando el derecho que
             deseas ejercer y adjuntando la información necesaria para identificar tu solicitud. Responderemos en
             el plazo máximo de un mes, ampliable otros dos meses si la solicitud es compleja.
           </p>
@@ -149,7 +169,7 @@ export default function PrivacyPage() {
             la Agencia Española de Protección de Datos (www.aepd.es), autoridad de control competente en España.
           </p>
 
-          <h2 className="pt-4 text-2xl font-semibold text-black">8. Seguridad</h2>
+          <h2 className="pt-4 text-2xl font-semibold text-black">9. Seguridad</h2>
           <p>
             Aplicamos medidas técnicas y organizativas razonables para proteger los datos frente a accesos no
             autorizados, pérdida o alteración. El Sitio se sirve mediante conexión cifrada HTTPS y limita el
@@ -160,23 +180,23 @@ export default function PrivacyPage() {
             tus derechos, lo comunicaríamos a las autoridades y, cuando corresponda, a las personas afectadas.
           </p>
 
-          <h2 className="pt-4 text-2xl font-semibold text-black">9. Menores de edad</h2>
+          <h2 className="pt-4 text-2xl font-semibold text-black">10. Menores de edad</h2>
           <p>
             El Sitio no está dirigido a menores de 14 años y no recoge conscientemente datos de menores. Si
             detectas que un menor nos ha facilitado datos personales, escríbenos y los eliminaremos.
           </p>
 
-          <h2 className="pt-4 text-2xl font-semibold text-black">10. Cambios en esta política</h2>
+          <h2 className="pt-4 text-2xl font-semibold text-black">11. Cambios en esta política</h2>
           <p>
             Podemos actualizar esta política para adaptarla a cambios normativos o de servicio. La versión
             vigente será siempre la publicada en esta página, con su fecha de última actualización. Si el cambio
             es relevante, lo indicaremos de forma destacada.
           </p>
 
-          <h2 className="pt-4 text-2xl font-semibold text-black">11. Contacto</h2>
+          <h2 className="pt-4 text-2xl font-semibold text-black">12. Contacto</h2>
           <p>
             Para cualquier duda sobre el tratamiento de tus datos personales, escribe a{" "}
-            <strong>hola@lavidabienpuesta.com</strong>.
+            <strong>{siteConfig.contactEmail}</strong>.
           </p>
         </article>
       </main>

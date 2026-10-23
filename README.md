@@ -170,6 +170,7 @@ Las variables se leen en `src/config/site.ts`.
 │  │  ├─ author-box.tsx
 │  │  ├─ breadcrumbs.tsx
 │  │  ├─ callout.tsx                # Bloque MDX <Callout type="info|warning">
+│  │  ├─ json-ld.tsx                # Datos estructurados schema.org
 │  │  ├─ toc.tsx                    # Índice generado desde los H2
 │  │  ├─ related-articles.tsx
 │  │  ├─ copyright-year.tsx         # Año automático del pie
@@ -183,7 +184,8 @@ Las variables se leen en `src/config/site.ts`.
 │  │  └─ articles.ts                # Artículos + helpers de consulta
 │  └─ lib/
 │     ├─ amazon.ts                  # Constructor de URLs de afiliado
-│     └─ content.ts                 # Esquema Zod del frontmatter
+│     ├─ content.ts                 # Esquema Zod del frontmatter
+│     └─ seo.ts                     # URLs absolutas e imagen social por defecto
 ├─ public/                          # Assets estáticos
 │  ├─ logo-mark.png                 # Monograma LVP (cabecera y pie)
 │  ├─ icon-192.png / icon-512.png   # Iconos PWA
@@ -305,10 +307,12 @@ Los parámetros de categoría y artículo se generan en build con
 
 ## SEO
 
-- Metadatos globales en `src/app/layout.tsx` (título con plantilla `%s | La Vida Bien Puesta`, Open Graph y Twitter Card).
-- `generateMetadata()` por categoría y por artículo, con `canonical` y Open Graph propios.
-- `sitemap.ts` incluye estáticas, categorías y artículos (usando `fechaActualizacion` si existe).
-- `robots.ts` permite todo salvo `/buscar/`.
+- Metadatos globales en `src/app/layout.tsx` (título con plantilla `%s | La Vida Bien Puesta`, descripción larga, Open Graph, Twitter Card y robots).
+- `generateMetadata()` por categoría y por artículo, con `canonical`, keywords, Open Graph de tipo `article` (fecha, autor, sección y etiquetas) e imágenes propias.
+- Imagen social por defecto en `public/images/og-default.jpg` (1200 × 630).
+- Datos estructurados JSON-LD: `WebSite` y `Organization` globales, `Article` y `BreadcrumbList` en artículos, y `CollectionPage` + `BreadcrumbList` en categorías.
+- `sitemap.ts` incluye estáticas, categorías y artículos con `priority` y `changeFrequency`, y excluye `/buscar/`.
+- `robots.ts` permite todo salvo `/buscar/` e indica el sitemap.
 - HTML semántico: un solo `h1` por página, `article`, `header`, `nav`, `aside`.
 
 ---
@@ -411,8 +415,6 @@ la configuración.
 - [ ] **Borradores**: implementar el filtrado de `borrador: true` en portada,
       categorías, búsqueda y sitemap.
 - [ ] **Contacto**: la página muestra el correo; valorar formulario con validación.
-- [ ] **Imágenes OG**: añadir `openGraph.images` por artículo y una imagen social
-      por defecto (1200×630).
 - [ ] **Analítica**: sin integración de métricas todavía.
 - [ ] **Tests**: no hay suite de pruebas configurada.
 
@@ -426,7 +428,7 @@ El sitio incluye enlaces de afiliado de Amazon en los artículos de producto y n
 muestra publicidad de terceros. El aviso legal y la política de privacidad
 recogen el régimen aplicable y el estado del tratamiento de datos.
 
-Contacto: **hola@lavidabienpuesta.com**
+Contacto: **the.blessed.nest.33@gmail.com**
 
 ---
 

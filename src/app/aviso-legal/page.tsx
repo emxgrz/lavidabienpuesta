@@ -3,11 +3,21 @@ import Link from "next/link";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Aviso legal",
   description:
     "Aviso legal de La Vida Bien Puesta: titularidad, condiciones de uso, propiedad intelectual, responsabilidad y enlaces de afiliado.",
+  alternates: { canonical: "/aviso-legal/" },
+  openGraph: {
+    title: "Aviso legal | La Vida Bien Puesta",
+    description:
+      "Titularidad, condiciones de uso, propiedad intelectual, responsabilidad y enlaces de afiliado.",
+    url: "/aviso-legal/",
+    type: "website",
+    images: ["/images/og-default.jpg"],
+  },
 };
 
 export default function LegalNoticePage() {
@@ -17,7 +27,7 @@ export default function LegalNoticePage() {
       <main className="container-page py-12">
         <article className="max-w-3xl space-y-5 leading-8 text-black/72">
           <h1 className="text-5xl font-semibold text-black">Aviso legal</h1>
-          <p className="text-sm text-black/55">Última actualización: 23 de octubre de 2026.</p>
+          <p className="text-sm text-black/55">Última actualización: 24 de octubre de 2026.</p>
 
           <h2 className="pt-4 text-2xl font-semibold text-black">1. Datos identificativos del titular</h2>
           <p>
@@ -25,7 +35,7 @@ export default function LegalNoticePage() {
             editorial digital titularidad de <strong>La Vida Bien Puesta</strong>.
           </p>
           <p>
-            Correo electrónico de contacto: <strong>hola@lavidabienpuesta.com</strong>.
+            Correo electrónico de contacto: <strong>{siteConfig.contactEmail}</strong>.
           </p>
           <p>
             Los datos identificativos completos del titular (nombre o denominación social, NIF y domicilio a
@@ -128,7 +138,7 @@ export default function LegalNoticePage() {
           <h2 className="pt-4 text-2xl font-semibold text-black">10. Contacto</h2>
           <p>
             Para cualquier duda sobre este aviso legal, puede escribir a{" "}
-            <strong>hola@lavidabienpuesta.com</strong>.
+            <strong>{siteConfig.contactEmail}</strong>.
           </p>
         </article>
       </main>

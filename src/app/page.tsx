@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { ArticleCard } from "@/components/article-card";
@@ -7,6 +8,30 @@ import { SiteHeader } from "@/components/site-header";
 import { articles } from "@/content/articles";
 import { categories } from "@/config/categories";
 import { siteConfig } from "@/config/site";
+import { defaultOgImage } from "@/lib/seo";
+
+const homeTitle = `${siteConfig.name} — ${siteConfig.slogan}`;
+
+export const metadata: Metadata = {
+  title: { absolute: homeTitle },
+  description: siteConfig.descriptionLong,
+  alternates: { canonical: `${siteConfig.url}/` },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: `${siteConfig.url}/`,
+    siteName: siteConfig.name,
+    title: homeTitle,
+    description: siteConfig.descriptionLong,
+    images: [defaultOgImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homeTitle,
+    description: siteConfig.descriptionLong,
+    images: [defaultOgImage.url],
+  },
+};
 
 export default function HomePage() {
   const featuredArticle = articles.find((article) => article.destacado) ?? articles[0];
@@ -20,6 +45,10 @@ export default function HomePage() {
             <p className="text-sm uppercase tracking-[0.22em] text-[var(--color-primario-oscuro)]">Revista digital de hogar y estilo de vida</p>
             <h1 className="mt-4 max-w-2xl text-5xl font-semibold leading-[1.02] text-balance md:text-7xl">{siteConfig.slogan}</h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-black/72">{siteConfig.descriptionShort}</p>
+            <p className="mt-3 max-w-xl text-base leading-8 text-black/65">
+              Orden y organización, decoración, ideas prácticas, hallazgos y guías de compra: contenido
+              editorial en español para vivir con más calma y mejor criterio.
+            </p>
           </div>
           <div className="rounded-3xl border border-black/10 bg-[color:var(--color-superficie)] p-7">
             <p className="text-sm uppercase tracking-[0.18em] text-black/55">Destacado</p>
