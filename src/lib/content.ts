@@ -16,4 +16,5 @@ export const articleFrontmatterSchema = z.object({
   etiquetas: z.array(z.string()).min(1),
   destacado: z.boolean().optional(),
   borrador: z.boolean().optional(),
+  afiliado: z.boolean().optional(),
 });

@@ -80,15 +80,18 @@ export default function LegalNoticePage() {
 
           <h2 className="pt-4 text-2xl font-semibold text-black">6. Enlaces de afiliado</h2>
           <p>
-            <strong>Actualmente el Sitio no utiliza enlaces de afiliado de Amazon ni de otras plataformas.</strong>{" "}
-            No hay productos enlazados a través de programas de afiliación ni se muestra ningún aviso de
-            afiliación en los artículos.
+            Algunos artículos del Sitio incluyen enlaces de afiliado del Programa de Afiliados de Amazon. Si
+            compras a través de ellos, podemos recibir una comisión sin que el precio cambie para ti.
           </p>
           <p>
-            Si en el futuro se incorporan enlaces de afiliado, se identificarán de forma clara e inequívoca en
-            el artículo correspondiente y en este aviso legal. La eventual comisión no tendrá coste adicional
-            para el usuario ni condicionará la selección editorial, que seguirá basándose en la utilidad, la
-            calidad y la pertinencia de cada producto.
+            Los artículos que contienen estos enlaces muestran un aviso de afiliación visible antes del
+            contenido. La selección, el análisis y la valoración de los productos son editoriales e
+            independientes; la posible comisión no condiciona la recomendación.
+          </p>
+          <p>
+            Los precios, la disponibilidad y las condiciones de compra se muestran en Amazon y pueden cambiar
+            en cualquier momento. La información publicada es orientativa: consulta siempre la ficha del
+            vendedor antes de comprar.
           </p>
 
           <h2 className="pt-4 text-2xl font-semibold text-black">7. Protección de datos</h2>

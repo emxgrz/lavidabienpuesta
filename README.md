@@ -4,7 +4,8 @@
 
 Revista digital de hogar y estilo de vida: orden, decoración, ideas prácticas,
 hallazgos y guías de compra. Contenido editorial en español (es-ES), sin
-publicidad ni enlaces de afiliado activos.
+publicidad de terceros y con enlaces de afiliado identificados en los artículos
+de producto.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.4-000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19.3-087ea4?logo=react&logoColor=white)](https://react.dev)
@@ -98,9 +99,9 @@ npm run dev
 
 Abre [http://localhost:3000](http://localhost:3000).
 
-> Las variables de entorno son opcionales y no son necesarias para el
-> funcionamiento actual de la web. Están reservadas por si se activan enlaces de
-> afiliado en el futuro.
+> Las variables de entorno son opcionales. El ID de afiliado tiene un valor por
+> defecto (`lavidabienpue-21`) y puede sobrescribirse con
+> `NEXT_PUBLIC_AMAZON_AFFILIATE_ID`.
 
 ---
 
@@ -118,8 +119,8 @@ NEXT_PUBLIC_AMAZON_DOMAIN=amazon.es
 
 | Variable | Obligatoria | Por defecto | Descripción |
 | --- | --- | --- | --- |
-| `NEXT_PUBLIC_AMAZON_AFFILIATE_ID` | No | `""` | Reservada. Sin uso mientras no haya enlaces de afiliado. |
-| `NEXT_PUBLIC_AMAZON_DOMAIN` | No | `amazon.es` | Reservada. Dominio usado si se activan enlaces de afiliado. |
+| `NEXT_PUBLIC_AMAZON_AFFILIATE_ID` | No | `lavidabienpue-21` | ID de afiliado usado en los enlaces de Amazon. |
+| `NEXT_PUBLIC_AMAZON_DOMAIN` | No | `amazon.es` | Dominio de Amazon usado al construir los enlaces. |
 
 Las variables se leen en `src/config/site.ts`.
 
@@ -162,10 +163,10 @@ Las variables se leen en `src/config/site.ts`.
 │  │  ├─ site-footer.tsx            # Pie con categorías y legales
 │  │  ├─ article-card.tsx
 │  │  ├─ category-card.tsx
-│  │  ├─ product-card.tsx           # Reservado para futuros enlaces de afiliado
-│  │  ├─ affiliate-link.tsx         # Reservado (rel="sponsored nofollow")
-│  │  ├─ affiliate-notice.tsx       # Reservado, sin uso actualmente
-│  │  ├─ affiliate-disclosure.tsx   # Reservado, sin uso actualmente
+│  │  ├─ product-card.tsx           # Tarjeta de producto con enlace de afiliado
+│  │  ├─ affiliate-link.tsx         # Enlace con rel="sponsored nofollow"
+│  │  ├─ affiliate-notice.tsx       # Aviso en artículos con afiliación
+│  │  ├─ affiliate-disclosure.tsx   # Divulgación completa (reservada)
 │  │  ├─ author-box.tsx
 │  │  ├─ breadcrumbs.tsx
 │  │  ├─ callout.tsx                # Bloque MDX <Callout type="info|warning">
@@ -223,6 +224,7 @@ campo `contenido`.
   etiquetas: ["baño", "espacios pequeños"],
   destacado: false,                    // opcional
   borrador: false,                     // opcional
+  afiliado: false,                     // opcional: muestra el aviso de afiliación
   contenido: `
 ## Empieza por lo que usas a diario
 
@@ -251,9 +253,11 @@ Es la red de seguridad para no publicar metadatos incompletos.
 
 - El **primer `##`** de cada artículo alimenta el índice automático (`TableOfContents`).
 - Usa `##` y `###`, nunca `#` (el H1 lo pone la plantilla).
-- Actualmente no se muestran avisos ni divulgaciones de afiliación: no hay
-  enlaces de afiliado activos. Si se añaden en el futuro, identifícalos en el
-  artículo y en el aviso legal, y utiliza los componentes reservados para ello.
+- Los artículos con enlaces de Amazon llevan `afiliado: true` y un bloque
+  `<ProductCard asin="..." ... />` dentro del MDX. El aviso de afiliación se
+  muestra automáticamente al activar ese campo.
+- El ID de afiliado se toma de `NEXT_PUBLIC_AMAZON_AFFILIATE_ID`; si no existe,
+  se usa `lavidabienpue-21` como valor por defecto.
 - `borrador: true` está previsto en el esquema, pero **todavía no se filtra** en
   los listados (ver [Pendientes conocidos](#pendientes-conocidos)).
 
@@ -311,20 +315,19 @@ Los parámetros de categoría y artículo se generan en build con
 
 ## Afiliación
 
-**Actualmente no hay enlaces de afiliado activos.** No se muestra ningún aviso
-de afiliación en los artículos, la barra lateral, el pie ni las páginas de
-contenido. El estado se recoge en el aviso legal.
-
-La infraestructura queda preparada por si se activa en el futuro:
+Los artículos de producto incluyen enlaces del Programa de Afiliados de Amazon.
+Se identifican con `afiliado: true`, muestran `AffiliateNotice` antes del
+contenido y llevan un bloque `ProductCard` con el botón de compra.
 
 - `src/lib/amazon.ts` → `buildAmazonAffiliateUrl(asin)` construye
   `https://{dominio}/dp/{asin}?tag={id}`. Sin ID, devuelve la URL limpia.
 - `AffiliateLink` añade `target="_blank"` y `rel="sponsored nofollow noopener"`.
-- `AffiliateNotice` y `AffiliateDisclosure` están reservados y no se renderizan
-  en ninguna página.
+- ID por defecto: `lavidabienpue-21`; se puede sobrescribir con
+  `NEXT_PUBLIC_AMAZON_AFFILIATE_ID`.
+- `AffiliateDisclosure` queda disponible para páginas legales o bloques
+  informativos, pero no se renderiza en los artículos.
 
-Si se activan enlaces de afiliado, habrá que identificarlos en el artículo
-correspondiente y actualizar el aviso legal antes de publicar.
+El aviso legal recoge el régimen general y la política de afiliación.
 
 ---
 
@@ -419,9 +422,9 @@ la configuración.
 
 Proyecto privado. Todos los derechos reservados.
 
-El sitio no utiliza actualmente enlaces de afiliado ni publicidad. El aviso legal
-y la política de privacidad recogen el régimen aplicable y el estado del
-tratamiento de datos.
+El sitio incluye enlaces de afiliado de Amazon en los artículos de producto y no
+muestra publicidad de terceros. El aviso legal y la política de privacidad
+recogen el régimen aplicable y el estado del tratamiento de datos.
 
 Contacto: **hola@lavidabienpuesta.com**
 

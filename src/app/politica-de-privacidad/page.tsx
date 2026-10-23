@@ -108,6 +108,12 @@ export default function PrivacyPage() {
             No se ceden datos a otros terceros, salvo obligación legal o requerimiento de una autoridad
             competente.
           </p>
+          <p>
+            Cuando haces clic en un enlace de afiliado de Amazon, abandonas el Sitio y accedes a una web
+            gestionada por Amazon, que actúa como responsable independiente del tratamiento. El Sitio no
+            comparte tus datos personales con Amazon; la compra y el uso posterior de sus servicios se rigen
+            por su propia política de privacidad.
+          </p>
 
           <h2 className="pt-4 text-2xl font-semibold text-black">6. Transferencias internacionales</h2>
           <p>

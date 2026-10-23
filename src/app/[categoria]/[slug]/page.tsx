@@ -3,10 +3,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 
+import { AffiliateNotice } from "@/components/affiliate-notice";
 import { ArticleCard } from "@/components/article-card";
 import { AuthorBox } from "@/components/author-box";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Callout } from "@/components/callout";
+import { ProductCard } from "@/components/product-card";
 import { RelatedArticles } from "@/components/related-articles";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -71,6 +73,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     etiquetas: article.etiquetas,
     destacado: article.destacado,
     borrador: article.borrador,
+    afiliado: article.afiliado,
   });
 
   const { content } = await compileMDX({
@@ -80,6 +83,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     },
     components: {
       Callout,
+      ProductCard,
     },
   });
 
@@ -111,6 +115,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 <Image src={article.imagenPrincipal} alt={article.imagenPrincipalAlt} fill className="object-cover" />
               </div>
             </div>
+
+            {article.afiliado ? <AffiliateNotice /> : null}
 
             <section className="prose-editorial max-w-none text-[1.02rem] leading-8">
               {content}

@@ -31,8 +31,18 @@ como cortesía y para poder rastrear su procedencia.
 | `category-orden.jpg` | <https://www.pexels.com/photo/33784616/> | American Cleaning Institute |
 | `category-decoracion.jpg` | <https://www.pexels.com/photo/29252369/> | Mateusz Pielech |
 | `category-ideas.jpg` | <https://www.pexels.com/photo/8287244/> | Ron Lach |
+| `article-vtopmart-cajas.jpg` | <https://www.pexels.com/photo/8580718/> | RDNE Stock project |
+| `article-vtopmart-cajas-pin.jpg` | <https://www.pexels.com/photo/8580745/> | RDNE Stock project |
+| `article-fiambreras-vidrio.jpg` | <https://www.pexels.com/photo/1640775/> | Ella Olsson |
+| `article-fiambreras-vidrio-pin.jpg` | <https://www.pexels.com/photo/9475298/> | Greta Hoffman |
+| `article-airfryer-xiaomi.jpg` | <https://www.pexels.com/photo/35285814/> | FOX |
+| `article-airfryer-xiaomi-pin.jpg` | <https://www.pexels.com/photo/26510349/> | FOX |
 
 Las versiones `-pin` son recortes verticales de 1000 × 1500 px preparados para
 Pinterest; en algunos artículos se usa una foto relacionada distinta de la
 principal. Las imágenes de artículo miden 1600 × 900 px y las de categoría
 1400 × 1050 px.
+
+Las imágenes `producto-*.jpg` proceden de las fichas oficiales de Amazon y se
+usan únicamente para ilustrar los productos analizados en los artículos de
+afiliación. Los derechos corresponden a sus titulares.

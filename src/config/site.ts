@@ -6,6 +6,8 @@ export const siteConfig = {
   locale: "es-ES",
   url: "https://lavidabienpuesta.com",
   amazonAffiliateId:
-    process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_ID ?? process.env.AMAZON_AFFILIATE_ID ?? "",
+    process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_ID ??
+    process.env.AMAZON_AFFILIATE_ID ??
+    "lavidabienpue-21",
   amazonDomain: process.env.NEXT_PUBLIC_AMAZON_DOMAIN ?? "amazon.es",
 } as const;

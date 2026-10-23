@@ -16,10 +16,265 @@ export type Article = {
   etiquetas: string[];
   destacado?: boolean;
   borrador?: boolean;
+  afiliado?: boolean;
   contenido: string;
 };
 
 export const articles: Article[] = [
+  {
+    titulo: "Cajas Vtopmart de 6,55 L: cómo ordenar la despensa con un solo sistema",
+    slug: "vtopmart-cajas-almacenamiento",
+    categoria: "orden-y-organizacion",
+    extracto: "Seis cajas transparentes, apilables y con tapa abatible: para qué sirven, qué limitaciones tienen y cuándo merecen la pena.",
+    fechaPublicacion: "2026-10-24",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-vtopmart-cajas.jpg",
+    imagenPrincipalAlt: "Tarzos transparentes con legumbres y pasta ordenados en una balda",
+    imagenPinterest: "/images/article-vtopmart-cajas-pin.jpg",
+    tituloPinterest: "Cajas Vtopmart para ordenar la despensa",
+    descripcionSeo:
+      "Análisis del set de 6 cajas Vtopmart de 6,55 L: medidas, capacidad, usos reales y limitaciones antes de comprarlas.",
+    etiquetas: ["cajas de almacenamiento", "despensa", "orden", "Vtopmart"],
+    afiliado: true,
+    contenido: `
+## Un sistema, no seis cajas sueltas
+
+La despensa se desordena cuando cada producto tiene un envase distinto y no hay un criterio común. Un set de cajas iguales hace que el ojo entienda antes dónde está cada cosa y permite apilar sin construir una torre inestable.
+
+Este set de Vtopmart incluye seis cajas grandes de 6,55 litros con tapa abatible y asas laterales. Son transparentes, apilables y están pensadas para ver el contenido sin tener que abrirlas.
+
+<ProductCard
+  asin="B0BC8VSWC7"
+  nombre="Vtopmart Juego de 6 Cajas de Almacenamiento con Tapa"
+  descripcionEditorial="Seis cajas transparentes de 6,55 litros, apilables y con tapa abatible. Una solución uniforme para despensa, nevera o armarios."
+  motivo="Unifican el sistema, dejan ver el contenido y se apilan sin perder estabilidad. Son prácticas para grupos de productos pequeños que hoy viven sueltos."
+  imagen="/images/producto-vtopmart-cajas.jpg"
+  alt="Juego de seis cajas transparentes apilables con tapa abatible"
+  etiqueta="Análisis"
+/>
+
+## Qué incluye exactamente
+
+- **6 cajas** de 6,55 litros cada una.
+- Medidas por caja: **27,9 cm de largo × 19,1 cm de ancho × 15,2 cm de alto**.
+- Fabricadas en **polietileno transparente**, con tapa abatible y asas laterales.
+- Peso total del conjunto: **3,21 kg**.
+- Acabado apilable, pensado para aprovechar la altura de la balda.
+
+La capacidad es generosa: en una caja caben varios paquetes de legumbres, snacks, sobres de repostería o una buena cantidad de fruta. No son cajas pequeñas de cajón, sino contenedores para baldas y armarios.
+
+## Para qué las usaría
+
+- **Despensa:** agrupar paquetes abiertos de arroz, pasta, frutos secos o galletas por categorías.
+- **Nevera:** fruta, verduras, quesos o embutidos que quieras tener a la vista.
+- **Baño y limpieza:** productos de limpieza, recambios y pequeños utensilios.
+- **Armarios:** cables, manualidades, material de oficina o juguetes pequeños.
+
+Funcionan mejor cuando el contenido es heterogéneo y quieres verlo de un vistazo. Si lo que guardas es polvo fino o líquidos, necesitas otro tipo de recipiente.
+
+## Cómo aprovecharlas de verdad
+
+### Mide la balda antes de comprar
+
+La altura de 15,2 cm es el dato clave. Súmale un margen para abrir la tapa y comprueba que puedes sacar la caja sin chocar con la balda superior. Si el hueco es justo, mejor medir dos veces que devolver seis cajas.
+
+### Agrupa por uso, no por marca
+
+Una caja para el desayuno, otra para la cocina diaria, otra para repostería. Ese criterio se mantiene aunque cambies de producto. Etiquetar solo lo que se confunde evita llenar la despensa de rótulos.
+
+### No las llenes hasta el borde
+
+El asa y la tapa están pensadas para levantar la caja con comodidad. Si la cargas demasiado, el plástico se deforma y la torre pierde estabilidad. Deja un pequeño margen y apila las más pesadas abajo.
+
+<Callout type="warning">Estas cajas no son herméticas: la tapa es abatible y la ficha del fabricante indica que no son resistentes al agua. No las uses para líquidos, salsas ni alimentos que puedan derramarse si la caja se inclina.</Callout>
+
+## Lo que conviene saber antes de comprar
+
+- **Transparencia total:** se ve el contenido, pero también el desorden. Si no mantienes un criterio, el efecto es el contrario.
+- **No son aptas para congelador o microondas** según su uso previsto; son cajas de almacenamiento en seco.
+- **El plástico se raya con el uso.** Lava con una esponja suave y evita estropajos abrasivos.
+- **Precio:** en el momento de publicar esta guía ronda los 33 €. Consulta el precio actual en Amazon, porque puede variar.
+
+## Veredicto
+
+Si tienes una despensa con paquetes sueltos y quieres unificar el sistema de una vez, este set tiene sentido: seis cajas del mismo tamaño, apilables y fáciles de ver. No son herméticas ni sustituyen a los tarros de conservación, pero para ordenar grupos de productos funcionan muy bien.
+
+Si tu prioridad es la estanqueidad total o guardar líquidos, no es la compra adecuada. Y si la balda mide menos de 17 cm de alto, busca un modelo más bajo.
+
+Para completar el sistema, tenemos una guía sobre [cómo ordenar los armarios de la cocina](/orden-y-organizacion/ordenar-armarios-cocina/).
+`,
+  },
+  {
+    titulo: "Fiambreras de vidrio borosilicato: la compra que hace fácil comer mejor",
+    slug: "fiambreras-vidrio-borosilicato",
+    categoria: "ideas-practicas",
+    extracto: "Tres tamaños, tapa hermética y vidrio que no retiene olores: lo que conviene saber antes de cambiar los tuppers de plástico.",
+    fechaPublicacion: "2026-10-24",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-fiambreras-vidrio.jpg",
+    imagenPrincipalAlt: "Tres fiambreras de vidrio con comida preparada en fila",
+    imagenPinterest: "/images/article-fiambreras-vidrio-pin.jpg",
+    tituloPinterest: "Fiambreras de vidrio para meal prep",
+    descripcionSeo:
+      "Análisis de un set de 3 fiambreras de vidrio borosilicato de 370, 640 y 930 ml: ventajas, límites y cuidados.",
+    etiquetas: ["fiambreras", "vidrio", "meal prep", "conservación"],
+    afiliado: true,
+    contenido: `
+## El problema del táper que huele a curry
+
+A todos nos ha pasado: abres un táper de plástico y sigue oliendo a la comida de la semana pasada, aunque esté limpio. El plástico absorbe olores y se tiñe con salsas, y con el tiempo acaba dando una sensación de desorden en la nevera.
+
+El vidrio borosilicato resuelve esa parte del problema. No retiene olores ni sabores, se limpia con facilidad y permite ver el contenido. Este set de tres fiambreras redondas añade algo más: tapa hermética, válvula de vapor y tres tamaños que cubren desde una salsa hasta una ración completa.
+
+<ProductCard
+  asin="B0CB75RNZN"
+  nombre="Set de 3 Fiambreras Redondas de Vidrio Borosilicato"
+  descripcionEditorial="Tres recipientes de 370, 640 y 930 ml con tapa hermética de cuatro pestañas, junta de silicona y válvula de vapor. Sin BPA."
+  motivo="El vidrio no retiene olores, aguanta bien el uso diario y las tres medidas se adaptan a sobras, meal prep y transporte. La válvula evita salpicaduras al calentar."
+  imagen="/images/producto-fiambreras-vidrio.jpg"
+  alt="Set de tres fiambreras redondas de vidrio con tapa"
+  etiqueta="Análisis"
+/>
+
+## Qué incluye el set
+
+- **Tres fiambreras redondas** de 370, 640 y 930 ml.
+- **Vidrio borosilicato**, resistente a temperaturas de **-20 °C a 400 °C**.
+- Tapa con **cuatro pestañas** y junta de silicona para un cierre hermético.
+- **Válvula de vapor** para calentar en microondas sin salpicaduras.
+- Libres de **BPA**, aptas para lavavajillas, nevera, congelador, microondas y horno (sin tapa).
+
+La más pequeña mide 17,5 × 17,5 × 7,6 cm. Es un tamaño compacto, cómodo para llevar al trabajo o guardar una ración individual.
+
+## Por qué el vidrio borosilicato
+
+El borosilicato es un vidrio con baja dilatación térmica, lo que le permite soportar cambios de temperatura mejor que el vidrio convencional. Por eso se usa en utensilios de laboratorio y en muchas bandejas de horno.
+
+En la práctica, eso significa que puedes pasar del frigorífico al microondas con más tranquilidad que con un vidrio normal. No significa que sea indestructible: un golpe contra el fregadero o un cambio térmico muy brusco pueden romperlo.
+
+## Los detalles que marcan la diferencia
+
+### Cuatro pestañas y junta de silicona
+
+El cierre de cuatro pestañas reparte la presión de forma más uniforme que una tapa de clip único. La junta de silicona es la que hace el sellado; conviene retirarla de vez en cuando y lavarla por separado para que no se acumulen restos.
+
+### Válvula de vapor
+
+Al calentar en el microondas, abre la válvula para que el vapor salga. Así evitas que la tapa se levante o que la comida salpique. No hace falta destapar por completo.
+
+### Tres tamaños que se apilan
+
+La de 930 ml sirve para una comida completa; la de 640 ml, para media ración o una ensalada; la de 370 ml, para salsas, fruta o snacks. Al ser redondas, se apilan con estabilidad y ocupan menos que tres tuppers de formas distintas.
+
+## Cómo usarlas sin sustos
+
+- **En el microondas:** con la válvula abierta. No selles la tapa del todo si vas a calentar durante varios minutos.
+- **En el horno:** sin tapa. El vidrio aguanta, pero la junta y la válvula no están pensadas para el calor directo.
+- **Del congelador al microondas:** mejor deja unos minutos a temperatura ambiente o usa la función de descongelación. Evita el choque térmico extremo.
+- **No las llenes hasta el borde:** los alimentos se expanden al congelarse y los líquidos al calentarse.
+
+<Callout type="warning">El vidrio borosilicato resiste bien el calor, pero no es irrompible. Evita apoyarlo sobre una superficie mojada o fría cuando esté caliente, y no lo uses si tiene un golpe o una grieta.</Callout>
+
+## ¿Merecen la pena?
+
+Sí, si buscas un set pequeño y versátil para meal prep, sobras o transporte de comida. El vidrio no retiene olores, se limpia bien y las tapas con válvula son un detalle útil en el día a día.
+
+No son la mejor opción si necesitas raciones muy grandes, si vas a transportar comida a diario en bicicleta y te preocupa el peso, o si buscas algo irrompible para niños. En esos casos, un recipiente de acero inoxidable o un táper de plástico de buena calidad puede encajar mejor.
+
+En el momento de publicar esta guía, el set ronda los 16 €. Consulta el precio actual en Amazon antes de comprar.
+
+Si quieres completar el sistema de conservación, tenemos ideas para [mantener la despensa ordenada](/ideas-practicas/despensa-ordenada-facil/).
+`,
+  },
+  {
+    titulo: "Xiaomi Smart Air Fryer 6.5L: cuándo merece la pena (y cuándo no)",
+    slug: "xiaomi-smart-air-fryer-6-5l",
+    categoria: "hallazgos",
+    extracto: "Capacidad grande, 1800 W y control desde el móvil: lo que realmente aporta y lo que conviene saber antes de hacer sitio en la encimera.",
+    fechaPublicacion: "2026-10-24",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-airfryer-xiaomi.jpg",
+    imagenPrincipalAlt: "Alitas de pollo doradas dentro de una freidora de aire",
+    imagenPinterest: "/images/article-airfryer-xiaomi-pin.jpg",
+    tituloPinterest: "Xiaomi Smart Air Fryer 6.5L: ¿merece la pena?",
+    descripcionSeo:
+      "Análisis de la Xiaomi Smart Air Fryer 6.5L: capacidad, potencia, funciones inteligentes, limitaciones y para quién tiene sentido.",
+    etiquetas: ["freidora de aire", "Xiaomi", "cocina", "electrodomésticos"],
+    afiliado: true,
+    contenido: `
+## La freidora de aire no hace magia
+
+Una freidora de aire no fríe como una freidora de aceite. Cocina con aire caliente en movimiento, y eso da resultados crujientes en algunos alimentos y texturas distintas en otros. Si esperas patatas fritas idénticas a las de una freidora tradicional, probablemente te decepcione.
+
+Si buscas una forma cómoda de cocinar verduras, pollo, pescado o recalentar sin encender el horno entero, la cosa cambia. La Xiaomi Smart Air Fryer 6.5L apunta a ese uso: capacidad familiar, control de temperatura amplio y funciones conectadas.
+
+<ProductCard
+  asin="B0CKFNWWDD"
+  nombre="Xiaomi Smart Air Fryer 6.5L"
+  descripcionEditorial="Freidora de aire de 6,5 litros y 1800 W, con pantalla OLED, temperatura regulable de 40 a 220 °C, recetas en la nube y control por voz."
+  motivo="La capacidad es suficiente para dos o cuatro personas, el rango de temperatura es amplio y la app añade recetas y programación. Es una opción completa si ya tienes sitio en la encimera."
+  imagen="/images/producto-airfryer-xiaomi.jpg"
+  alt="Freidora de aire Xiaomi Smart Air Fryer 6.5L en color negro"
+  etiqueta="Análisis"
+/>
+
+## Qué ofrece
+
+- **Capacidad:** 6,5 litros.
+- **Potencia:** 1800 W.
+- **Temperatura:** regulable entre **40 °C y 220 °C**.
+- **Cocción:** convección de 360° para repartir el calor.
+- **Pantalla OLED** y control desde la app.
+- **Más de 100 recetas** en la nube y programación de hasta 24 horas.
+- **Control por voz** con dispositivos compatibles con Google Assistant.
+- Medidas: **38,9 cm de fondo × 31,7 cm de ancho × 28,7 cm de alto**.
+- Peso: **5,4 kg**.
+
+La versión ES incluye el menú y el enchufe españoles. Es un electrodoméstico grande: antes de comprarlo, mide el hueco y comprueba que puedes abrir la cesta sin chocar con la pared o con otros aparatos.
+
+## Lo que hace bien
+
+### Cocinar para dos o cuatro personas
+
+6,5 litros permiten una bandeja de verduras y proteína a la vez, o una tanda de alitas para compartir. Es una capacidad cómoda para una familia pequeña, sin llegar a los modelos enormes de 8 litros.
+
+### Verduras y alimentos que se benefician del aire
+
+Berenjena, calabacín, brócoli, patata en bastones, pollo marinado o salmón funcionan bien. La clave es no amontonar: el aire tiene que circular. Si llenas la cesta hasta arriba, el resultado se parece más a vapor que a crujiente.
+
+### Recalentar sin encender el horno
+
+Para una ración de pizza, croquetas o verduras asadas, la freidora calienta rápido y no necesita el precalentamiento de un horno grande. Ahí está buena parte de su valor diario.
+
+### Programación y recetas
+
+La app permite lanzar recetas y programar la cocción. Es útil si te gusta dejar preparado o si no quieres memorizar tiempos. Tampoco es imprescindible: los controles de la pantalla bastan para el uso normal.
+
+## Lo que no es
+
+- **No sustituye a una freidora de aceite.** La textura y el sabor son distintos.
+- **No es un horno completo.** No tiene la misma superficie ni la misma versatilidad para repostería o guisos.
+- **No es silenciosa.** El ventilador se oye, aunque no más que un horno con convección.
+- **No es pequeña.** Necesita una encimera estable, ventilación alrededor y espacio para abrir la cesta.
+- **Las funciones inteligentes no son obligatorias.** Si no vas a usar la app, pagas por algo que no aprovecharás.
+
+## Consumo y limpieza
+
+Con 1800 W, es un aparato potente. Calienta rápido, pero no es gratis en términos de consumo: para raciones muy pequeñas, a veces sale más a cuenta el microondas o una sartén.
+
+La cesta y la rejilla se extraen para limpiar. Consulta las instrucciones del fabricante sobre lavavajillas y evita los estropajos metálicos para no dañar el recubrimiento. La resistencia y el interior se limpian mejor cuando el aparato está frío.
+
+<Callout type="warning">No llenes la cesta por encima de la marca máxima ni bloquees las salidas de aire. Deja espacio para que circule el calor, usa guantes para sacar la cesta y desenchufa el aparato antes de limpiarlo.</Callout>
+
+## ¿Merece la pena?
+
+Merece la pena si tienes espacio en la encimera, cocinas para dos o cuatro personas y buscas una forma rápida de hacer verduras, proteínas y recalentados. La capacidad de 6,5 litros y el rango de temperatura la hacen versátil, y la app añade comodidad sin ser el centro de la experiencia.
+
+No la compraría si tu cocina es muy pequeña, si esperas el sabor de una fritura tradicional o si ya tienes un horno pequeño que usas a diario. En el momento de publicar esta guía ronda los 99 €; consulta el precio actual en Amazon.
+
+Si quieres hacerle sitio en la cocina, tenemos ideas para [ordenar los armarios y la encimera](/orden-y-organizacion/ordenar-armarios-cocina/).
+`,
+  },
   {
     titulo: "Seis objetos de cocina que merecen quedarse a la vista",
     slug: "objetos-cocina-a-la-vista",
