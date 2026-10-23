@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { categories } from "@/config/categories";
@@ -8,7 +9,8 @@ export function SiteFooter() {
     <footer className="mt-20 border-t border-black/10 bg-[color:var(--color-superficie)]/60">
       <div className="container-page grid gap-10 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <p className="text-lg font-semibold">{siteConfig.name}</p>
+          <Image src="/logo-mark.png" alt="" width={353} height={256} sizes="48px" className="h-12 w-auto" />
+          <p className="mt-3 font-serif text-lg font-semibold">{siteConfig.name}</p>
           <p className="mt-3 max-w-sm text-sm leading-7 text-black/70">{siteConfig.descriptionShort}</p>
           <p className="mt-4 text-sm text-black/70">Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.</p>
         </div>

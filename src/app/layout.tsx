@@ -22,9 +22,6 @@ export const metadata: Metadata = {
   description: siteConfig.descriptionShort,
   applicationName: siteConfig.name,
   manifest: "/manifest.webmanifest",
-  icons: {
-    icon: "/favicon.ico",
-  },
   openGraph: {
     type: "website",
     locale: "es_ES",
