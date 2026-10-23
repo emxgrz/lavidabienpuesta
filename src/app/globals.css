@@ -54,10 +54,25 @@ a {
   line-height: 1.8;
 }
 
-.prose-editorial h2,
+.prose-editorial h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
 .prose-editorial h3 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.prose-editorial a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-primario-oscuro) 45%, transparent);
 }
 
 .prose-editorial ul {

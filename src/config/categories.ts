@@ -4,6 +4,7 @@ export type CategoryConfig = {
   descripcion: string;
   descripcionSeo: string;
   imagen: string;
+  imagenAlt: string;
   orden: number;
 };
 
@@ -15,6 +16,7 @@ export const categories: CategoryConfig[] = [
     descripcionSeo:
       "Ideas, rutinas y soluciones para ordenar armarios, cajones, despensas y espacios pequeños.",
     imagen: "/images/category-orden.jpg",
+    imagenAlt: "Armario de cocina con cestas de mimbre y baldas de madera",
     orden: 1,
   },
   {
@@ -24,6 +26,7 @@ export const categories: CategoryConfig[] = [
     descripcionSeo:
       "Inspiración de decoración para crear casas acogedoras, funcionales y con criterio editorial.",
     imagen: "/images/category-decoracion.jpg",
+    imagenAlt: "Salón con sofá beige y cojines verdes junto a una ventana",
     orden: 2,
   },
   {
@@ -33,6 +36,7 @@ export const categories: CategoryConfig[] = [
     descripcionSeo:
       "Guías prácticas, trucos y recomendaciones para resolver problemas cotidianos con buen gusto.",
     imagen: "/images/category-ideas.jpg",
+    imagenAlt: "Tarros de cristal con legumbres sobre una mesa de madera",
     orden: 3,
   },
   {
@@ -42,6 +46,7 @@ export const categories: CategoryConfig[] = [
     descripcionSeo:
       "Selecciones editoriales de productos útiles, bonitos y con una buena relación calidad-precio.",
     imagen: "/images/category-hallazgos.jpg",
+    imagenAlt: "Encimera con tabla de madera, cuenco y tarros de cerámica",
     orden: 4,
   },
   {
@@ -51,6 +56,7 @@ export const categories: CategoryConfig[] = [
     descripcionSeo:
       "Guías de compra pensadas para decidir con calma sobre productos del hogar y organización.",
     imagen: "/images/category-guias.jpg",
+    imagenAlt: "Vajilla de cerámica apilada sobre un mantel de lino",
     orden: 5,
   },
 ];

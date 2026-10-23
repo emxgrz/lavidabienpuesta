@@ -19,6 +19,20 @@ como cortesía y para poder rastrear su procedencia.
 | `article-muebles-madera-pin.jpg` | <https://www.pexels.com/photo/19052812/> | Sabine Fischer |
 | `article-ropa-blanca.jpg` | <https://www.pexels.com/photo/4210372/> | Kaboompics.com |
 | `article-ropa-blanca-pin.jpg` | <https://www.pexels.com/photo/10565604/> | Ron Lach |
+| `article-cocina-a-la-vista.jpg`, `article-cocina-a-la-vista-pin.jpg`, `category-hallazgos.jpg` | <https://www.pexels.com/photo/8251829/> | PNW Production |
+| `article-escritorio-tranquilo.jpg` | <https://www.pexels.com/photo/5124878/> | cottonbro studio |
+| `article-escritorio-tranquilo-pin.jpg` | <https://www.pexels.com/photo/14792339/> | Wallace Chuck |
+| `article-alfombra-salon.jpg` | <https://www.pexels.com/photo/27059629/> | Wilcle Nunes |
+| `article-alfombra-salon-pin.jpg` | <https://www.pexels.com/photo/32631105/> | Pușcaș Adryan |
+| `article-sabanas.jpg` | <https://www.pexels.com/photo/14063721/> | Natalia Walusiak |
+| `article-sabanas-pin.jpg` | <https://www.pexels.com/photo/3847588/> | ready made |
+| `article-vajilla.jpg` | <https://www.pexels.com/photo/14341977/> | Pexels |
+| `article-vajilla-pin.jpg`, `category-guias.jpg` | <https://www.pexels.com/photo/6794580/> | Kaboompics.com |
+| `category-orden.jpg` | <https://www.pexels.com/photo/33784616/> | American Cleaning Institute |
+| `category-decoracion.jpg` | <https://www.pexels.com/photo/29252369/> | Mateusz Pielech |
+| `category-ideas.jpg` | <https://www.pexels.com/photo/8287244/> | Ron Lach |
 
-Las versiones `-pin` son recortes verticales (1000 × 1500 px) de la misma foto,
-preparados para Pinterest. Las principales están recortadas a 1600 × 900 px.
+Las versiones `-pin` son recortes verticales de 1000 × 1500 px preparados para
+Pinterest; en algunos artículos se usa una foto relacionada distinta de la
+principal. Las imágenes de artículo miden 1600 × 900 px y las de categoría
+1400 × 1050 px.

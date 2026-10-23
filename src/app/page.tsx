@@ -65,7 +65,7 @@ export default function HomePage() {
             <p className="mt-3 max-w-2xl text-sm leading-7 text-black/72">Selección cuidada de productos útiles y bonitos, siempre después del contenido editorial y solo cuando aportan una solución clara.</p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm">
               <Link href="/hallazgos/" className="rounded-full bg-[var(--color-primario)] px-5 py-2.5 text-white">Ver hallazgos</Link>
-              <Link href="/divulgacion-de-afiliados/" className="rounded-full border border-black/10 px-5 py-2.5">Cómo financiamos la revista</Link>
+              <Link href="/aviso-legal/" className="rounded-full border border-black/10 px-5 py-2.5">Información legal</Link>
             </div>
           </div>
         </section>

@@ -3,8 +3,8 @@
 **Ideas bonitas para vivir mejor.**
 
 Revista digital de hogar y estilo de vida: orden, decoración, ideas prácticas,
-hallazgos y guías de compra. Contenido editorial en español (es-ES) con una
-monetización discreta mediante el Programa de Afiliados de Amazon.
+hallazgos y guías de compra. Contenido editorial en español (es-ES), sin
+publicidad ni enlaces de afiliado activos.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.4-000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19.3-087ea4?logo=react&logoColor=white)](https://react.dev)
@@ -26,7 +26,7 @@ monetización discreta mediante el Programa de Afiliados de Amazon.
 - [Categorías](#categorías)
 - [Rutas](#rutas)
 - [SEO](#seo)
-- [Afiliación de Amazon](#afiliación-de-amazon)
+- [Afiliación](#afiliación)
 - [Búsqueda](#búsqueda)
 - [Identidad visual](#identidad-visual)
 - [Despliegue](#despliegue)
@@ -98,8 +98,9 @@ npm run dev
 
 Abre [http://localhost:3000](http://localhost:3000).
 
-> Las variables de entorno son opcionales para desarrollo: sin ellas la web
-> funciona y los enlaces a Amazon se generan sin etiqueta de afiliado.
+> Las variables de entorno son opcionales y no son necesarias para el
+> funcionamiento actual de la web. Están reservadas por si se activan enlaces de
+> afiliado en el futuro.
 
 ---
 
@@ -117,8 +118,8 @@ NEXT_PUBLIC_AMAZON_DOMAIN=amazon.es
 
 | Variable | Obligatoria | Por defecto | Descripción |
 | --- | --- | --- | --- |
-| `NEXT_PUBLIC_AMAZON_AFFILIATE_ID` | No | `""` | Tag de afiliado. Si está vacía, se enlaza a Amazon sin tag. |
-| `NEXT_PUBLIC_AMAZON_DOMAIN` | No | `amazon.es` | Dominio de Amazon usado al construir los enlaces. |
+| `NEXT_PUBLIC_AMAZON_AFFILIATE_ID` | No | `""` | Reservada. Sin uso mientras no haya enlaces de afiliado. |
+| `NEXT_PUBLIC_AMAZON_DOMAIN` | No | `amazon.es` | Reservada. Dominio usado si se activan enlaces de afiliado. |
 
 Las variables se leen en `src/config/site.ts`.
 
@@ -154,7 +155,6 @@ Las variables se leen en `src/config/site.ts`.
 │  │  ├─ aviso-legal/
 │  │  ├─ politica-de-privacidad/
 │  │  ├─ politica-de-cookies/
-│  │  ├─ divulgacion-de-afiliados/
 │  │  ├─ [categoria]/page.tsx       # Listado de categoría
 │  │  └─ [categoria]/[slug]/page.tsx # Artículo
 │  ├─ components/                   # Componentes de UI reutilizables
@@ -162,19 +162,20 @@ Las variables se leen en `src/config/site.ts`.
 │  │  ├─ site-footer.tsx            # Pie con categorías y legales
 │  │  ├─ article-card.tsx
 │  │  ├─ category-card.tsx
-│  │  ├─ product-card.tsx           # Tarjeta de producto con enlace afiliado
-│  │  ├─ affiliate-link.tsx         # Enlace con rel="sponsored nofollow"
-│  │  ├─ affiliate-notice.tsx       # Aviso dentro del artículo
-│  │  ├─ affiliate-disclosure.tsx   # Divulgación completa
+│  │  ├─ product-card.tsx           # Reservado para futuros enlaces de afiliado
+│  │  ├─ affiliate-link.tsx         # Reservado (rel="sponsored nofollow")
+│  │  ├─ affiliate-notice.tsx       # Reservado, sin uso actualmente
+│  │  ├─ affiliate-disclosure.tsx   # Reservado, sin uso actualmente
 │  │  ├─ author-box.tsx
 │  │  ├─ breadcrumbs.tsx
 │  │  ├─ callout.tsx                # Bloque MDX <Callout type="info|warning">
 │  │  ├─ toc.tsx                    # Índice generado desde los H2
 │  │  ├─ related-articles.tsx
-│  │  ├─ pinterest-save-button.tsx
+│  │  ├─ copyright-year.tsx         # Año automático del pie
+│  │  ├─ pinterest-save-button.tsx  # Reservado, sin uso actualmente
 │  │  └─ search-client.tsx          # Búsqueda Fuse.js (client component)
 │  ├─ config/
-│  │  ├─ site.ts                    # Nombre, slogan, URL, afiliación
+│  │  ├─ site.ts                    # Nombre, slogan, URL y configuración
 │  │  ├─ categories.ts              # Definición y orden de categorías
 │  │  └─ navigation.ts              # Navegación principal
 │  ├─ content/
@@ -185,7 +186,7 @@ Las variables se leen en `src/config/site.ts`.
 ├─ public/                          # Assets estáticos
 │  ├─ logo-mark.png                 # Monograma LVP (cabecera y pie)
 │  ├─ icon-192.png / icon-512.png   # Iconos PWA
-│  └─ ...                           # Imágenes de artículos (pendientes)
+│  └─ images/                       # Imágenes de artículos y categorías
 ├─ assets/
 │  └─ brand/                        # PNG originales del logo y el favicon
 ├─ next.config.ts
@@ -250,10 +251,9 @@ Es la red de seguridad para no publicar metadatos incompletos.
 
 - El **primer `##`** de cada artículo alimenta el índice automático (`TableOfContents`).
 - Usa `##` y `###`, nunca `#` (el H1 lo pone la plantilla).
-- Los enlaces a productos deben ir por `ProductCard` o `buildAmazonAffiliateUrl()`,
-  nunca a mano, para no perder el tag de afiliado ni el `rel` correcto.
-- Si el artículo promociona productos, incluye el aviso de afiliación (ya se
-  muestra automáticamente con `AffiliateNotice`).
+- Actualmente no se muestran avisos ni divulgaciones de afiliación: no hay
+  enlaces de afiliado activos. Si se añaden en el futuro, identifícalos en el
+  artículo y en el aviso legal, y utiliza los componentes reservados para ello.
 - `borrador: true` está previsto en el esquema, pero **todavía no se filtra** en
   los listados (ver [Pendientes conocidos](#pendientes-conocidos)).
 
@@ -290,7 +290,6 @@ y en `article.categoria`), una descripción editorial y otra SEO, y el orden.
 | `/aviso-legal/` | Aviso legal | Sí |
 | `/politica-de-privacidad/` | Privacidad | Sí |
 | `/politica-de-cookies/` | Cookies | Sí |
-| `/divulgacion-de-afiliados/` | Divulgación | Sí |
 | `/sitemap.xml` | Sitemap generado | — |
 | `/robots.txt` | Robots generado | — |
 | `/manifest.webmanifest` | Manifest PWA | — |
@@ -310,16 +309,22 @@ Los parámetros de categoría y artículo se generan en build con
 
 ---
 
-## Afiliación de Amazon
+## Afiliación
+
+**Actualmente no hay enlaces de afiliado activos.** No se muestra ningún aviso
+de afiliación en los artículos, la barra lateral, el pie ni las páginas de
+contenido. El estado se recoge en el aviso legal.
+
+La infraestructura queda preparada por si se activa en el futuro:
 
 - `src/lib/amazon.ts` → `buildAmazonAffiliateUrl(asin)` construye
-  `https://{dominio}/dp/{asin}?tag={id}`. Si no hay ID, devuelve la URL limpia.
+  `https://{dominio}/dp/{asin}?tag={id}`. Sin ID, devuelve la URL limpia.
 - `AffiliateLink` añade `target="_blank"` y `rel="sponsored nofollow noopener"`.
-- Avisos legales: `AffiliateNotice` (dentro del artículo) y `AffiliateDisclosure`
-  (barra lateral y página de divulgación).
-- El texto de divulgación requerido por Amazon aparece también en el pie.
+- `AffiliateNotice` y `AffiliateDisclosure` están reservados y no se renderizan
+  en ninguna página.
 
-Pendiente de configurar en producción: `NEXT_PUBLIC_AMAZON_AFFILIATE_ID`.
+Si se activan enlaces de afiliado, habrá que identificarlos en el artículo
+correspondiente y actualizar el aviso legal antes de publicar.
 
 ---
 
@@ -386,8 +391,7 @@ Recomendado: **Vercel** (soporte nativo de Next.js 16).
 
 1. Importa el repositorio en Vercel.
 2. Framework detectado automáticamente: Next.js.
-3. Configura las variables de entorno (`NEXT_PUBLIC_AMAZON_AFFILIATE_ID`,
-   `NEXT_PUBLIC_AMAZON_DOMAIN`) en *Settings → Environment Variables*.
+3. No se requieren variables de entorno para el funcionamiento actual.
 4. Despliega. `sitemap.xml`, `robots.txt` y `manifest.webmanifest` se generan solos.
 
 `siteConfig.url` (`src/config/site.ts`) debe coincidir con el dominio final
@@ -401,9 +405,6 @@ la configuración.
 
 ## Pendientes conocidos
 
-- [ ] **Imágenes de artículos**: las rutas `/images/...` referenciadas en
-      `articles.ts` y `categories.ts` aún no existen en `public/`. Hay que subir
-      los archivos o las páginas mostrarán imágenes rotas.
 - [ ] **Borradores**: implementar el filtrado de `borrador: true` en portada,
       categorías, búsqueda y sitemap.
 - [ ] **Contacto**: la página muestra el correo; valorar formulario con validación.
@@ -418,9 +419,9 @@ la configuración.
 
 Proyecto privado. Todos los derechos reservados.
 
-Como afiliado de Amazon, este sitio obtiene ingresos por las compras adscritas
-que cumplen los requisitos aplicables. Los enlaces de afiliado se identifican y
-nunca condicionan la selección editorial.
+El sitio no utiliza actualmente enlaces de afiliado ni publicidad. El aviso legal
+y la política de privacidad recogen el régimen aplicable y el estado del
+tratamiento de datos.
 
 Contacto: **hola@lavidabienpuesta.com**
 

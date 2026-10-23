@@ -3,13 +3,10 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 
-import { AffiliateNotice } from "@/components/affiliate-notice";
-import { AffiliateDisclosure } from "@/components/affiliate-disclosure";
 import { ArticleCard } from "@/components/article-card";
 import { AuthorBox } from "@/components/author-box";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Callout } from "@/components/callout";
-import { PinterestSaveButton } from "@/components/pinterest-save-button";
 import { RelatedArticles } from "@/components/related-articles";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -115,8 +112,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </div>
             </div>
 
-            <AffiliateNotice />
-
             <section className="prose-editorial max-w-none text-[1.02rem] leading-8">
               {content}
             </section>
@@ -126,18 +121,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <AuthorBox />
 
             <RelatedArticles articles={relatedArticles} />
-
-            <div className="rounded-2xl border border-black/10 bg-white/50 p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-black/55">Guardar</p>
-              <p className="mt-2 text-sm leading-7 text-black/72">Usa la imagen vertical preparada para Pinterest y vuelve a esta pieza cuando quieras retomar la idea.</p>
-              <div className="mt-4">
-                <PinterestSaveButton href={article.imagenPinterest} />
-              </div>
-            </div>
           </article>
 
           <aside className="space-y-6 lg:sticky lg:top-6 lg:self-start">
-            <AffiliateDisclosure />
             <div className="rounded-2xl border border-black/10 bg-white/50 p-5 text-sm leading-7">
               <h2 className="text-xl font-semibold">Lecturas de la categoría</h2>
               <div className="mt-4 space-y-4">

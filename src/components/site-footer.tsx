@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { CopyrightYear } from "@/components/copyright-year";
 import { categories } from "@/config/categories";
 import { siteConfig } from "@/config/site";
+
+const buildYear = new Date().getFullYear();
 
 export function SiteFooter() {
   return (
@@ -12,7 +15,6 @@ export function SiteFooter() {
           <Image src="/logo-mark.png" alt="" width={353} height={256} sizes="48px" className="h-12 w-auto" />
           <p className="mt-3 font-serif text-lg font-semibold">{siteConfig.name}</p>
           <p className="mt-3 max-w-sm text-sm leading-7 text-black/70">{siteConfig.descriptionShort}</p>
-          <p className="mt-4 text-sm text-black/70">Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.</p>
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.16em]">Categorías</p>
@@ -32,8 +34,15 @@ export function SiteFooter() {
             <li><Link href="/aviso-legal/">Aviso legal</Link></li>
             <li><Link href="/politica-de-privacidad/">Política de privacidad</Link></li>
             <li><Link href="/politica-de-cookies/">Política de cookies</Link></li>
-            <li><Link href="/divulgacion-de-afiliados/">Divulgación de afiliados</Link></li>
           </ul>
+        </div>
+      </div>
+      <div className="border-t border-black/10">
+        <div className="container-page flex flex-col gap-2 py-5 text-sm text-black/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © <CopyrightYear initialYear={buildYear} /> {siteConfig.name}. Todos los derechos reservados.
+          </p>
+          <p>Hecho con calma, como todo lo demás.</p>
         </div>
       </div>
     </footer>

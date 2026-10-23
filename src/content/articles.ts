@@ -21,6 +21,228 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    titulo: "Seis objetos de cocina que merecen quedarse a la vista",
+    slug: "objetos-cocina-a-la-vista",
+    categoria: "hallazgos",
+    extracto: "Piezas que resuelven, envejecen bien y no necesitan esconderse: una selección para usar todos los días.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-cocina-a-la-vista.jpg",
+    imagenPrincipalAlt: "Encimera con tabla de madera, cuenco, tarro de cerámica y utensilios",
+    imagenPinterest: "/images/article-cocina-a-la-vista-pin.jpg",
+    tituloPinterest: "6 objetos de cocina que merecen quedarse a la vista",
+    descripcionSeo:
+      "Selección editorial de objetos de cocina útiles y bonitos: tablas, cerámica, textiles y bandejas que envejecen bien.",
+    etiquetas: ["cocina", "hallazgos", "cerámica", "madera"],
+    contenido: `
+## Un hallazgo no es una novedad
+
+Un objeto que merece quedarse a la vista tiene que cumplir tres condiciones: resolver algo, resistir el uso diario y no cansar a la vista. Si falla una, acaba en un cajón. Esta selección no va de novedades, sino de piezas que se usan de verdad.
+
+## 1. Una tabla de madera que se pueda colgar
+
+Una tabla de corte de madera maciza, con asa y un agujero para colgarla, resuelve el corte, el servicio de aperitivos y la presentación de la fruta. Cuanto más simple, mejor: las formas muy decoradas son difíciles de limpiar y acaban guardadas.
+
+Elige madera de haya, olivo o acacia, sin tratamientos que no sean aptos para alimentos. Sécala de pie y frótala con una gota de aceite mineral de vez en cuando.
+
+## 2. Un tarro de cerámica para los utensilios
+
+Los cubiertos de madera y las espátulas necesitan un recipiente estable, con base ancha y boca suficiente para no atrapar la humedad. Un tarro de gres o cerámica mate cumple mejor esa función que un vaso alto, que vuelca con facilidad.
+
+Si el tarro es opaco, no verás los restos que se acumulan en el fondo. Lávalo cada semana y deja secar las piezas antes de devolverlas.
+
+## 3. Cuencos apilables de gres
+
+Un juego de tres cuencos de tamaños distintos sustituye a media docena de recipientes sueltos. Sirven para preparar, servir y guardar. El gres aguanta el calor, no retiene olores y envejece mejor que muchas piezas decorativas.
+
+Mejor si son apilables y aptos para lavavajillas. La cerámica hecha a mano tiene variaciones de color: no es un defecto, es parte del encanto.
+
+## 4. Un paño de lino grueso
+
+Un paño de lino o algodón de tejido grueso dura más, seca mejor y se ve más bonito que una bayeta fina. Sirve para tapar el pan, secar la encimera o cubrir una bandeja.
+
+Ten dos: uno para las manos y otro para la comida. Lávalos a 40 °C y evita el suavizante, que reduce la absorción.
+
+## 5. Una jarra con asa cómoda
+
+Una jarra de cerámica o vidrio resistente, con asa amplia y pico vertedor, es más útil de lo que parece: agua en la mesa, flores, utensilios o restos de café. El asa debe caber con la mano entera, no solo con dos dedos.
+
+## 6. Una bandeja que recoja todo
+
+Una bandeja de madera o metal mate en la encimera agrupa el aceite, la sal, la pimienta y el molinillo. Reduce el ruido visual y permite limpiar debajo en un gesto. Debe tener un borde bajo y un tamaño que no ocupe media cocina.
+
+<Callout type="info">Antes de comprar un objeto «de cocina bonito», pregúntate dónde va a vivir. Si no tiene un sitio fijo, probablemente no resuelva nada.</Callout>
+
+## Cómo elegir sin acumular
+
+La regla es sencilla: una función, un objeto. Si ya tienes un bol para servir, no necesitas tres. Si la tabla no cabe colgada, no la compres aunque sea preciosa.
+
+Los buenos hallazgos no llenan la encimera: la dejan respirar. Y cuanto menos haya a la vista, más se disfruta lo que queda.
+`,
+  },
+  {
+    titulo: "Un escritorio más tranquilo: hallazgos que sí se usan",
+    slug: "hallazgos-escritorio-tranquilo",
+    categoria: "hallazgos",
+    extracto: "Cuadernos, luz y pequeños contenedores: lo que ayuda a trabajar sin llenar la mesa de objetos.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-escritorio-tranquilo.jpg",
+    imagenPrincipalAlt: "Escritorio con cuaderno, bolígrafo y libros sobre una mesa de madera",
+    imagenPinterest: "/images/article-escritorio-tranquilo-pin.jpg",
+    tituloPinterest: "Hallazgos para un escritorio tranquilo",
+    descripcionSeo:
+      "Selección de objetos útiles para el escritorio: cuadernos, iluminación, contenedores y bandejas que ordenan sin recargar.",
+    etiquetas: ["escritorio", "hallazgos", "papelería", "orden"],
+    contenido: `
+## La mesa no necesita más cosas
+
+Un escritorio tranquilo no es el que está vacío, sino el que tiene solo lo que se usa. Antes de comprar un organizador nuevo, retira todo y deja encima únicamente lo que necesitas para trabajar. Lo que no vuelva en una semana probablemente no era necesario.
+
+## Un cuaderno que se abra plano
+
+Un cuaderno cosido o con encuadernación que permita abrirlo entero es más cómodo que uno encolado que se cierra solo. El papel importa: si escribes con pluma, busca un gramaje alto; si usas lápiz, uno con algo de textura.
+
+No necesitas uno para cada cosa. Con un cuaderno principal y una libreta pequeña para lo urgente suele bastar.
+
+## Un bolígrafo que apetezca usar
+
+Escribir a mano mejora cuando el útil funciona. Un bolígrafo de tinta fluida, un lápiz con buen agarre o una pluma sencilla bastan. Lo importante es que no raspe, que no se seque y que puedas recargarlo.
+
+## Una lámpara que ilumine el papel, no los ojos
+
+La luz del escritorio debe caer sobre la superficie de trabajo sin deslumbrar. Una lámpara con brazo articulado y pantalla opaca permite dirigir el haz y evitar sombras de la mano. Si trabajas de noche, elige una temperatura cálida y una intensidad regulable.
+
+## Un contenedor pequeño para lo suelto
+
+Clips, gomas, tarjetas y cables cortos necesitan un único recipiente pequeño, no cinco cajas. Un cuenco de cerámica o una caja de madera con tapa resuelve el problema y se integra en la mesa.
+
+## Una bandeja para el portátil
+
+Si el portátil se queda en el escritorio, una bandeja o base de madera lo eleva, mejora la ventilación y delimita su sitio. También sirve para recoger el cargador y los papeles que se acumulan alrededor.
+
+<Callout type="info">La mejor inversión para un escritorio suele ser una silla cómoda y una luz bien colocada. Los accesorios vienen después.</Callout>
+
+## Menos, pero mejor
+
+Un escritorio se mantiene ordenado cuando cada objeto tiene una función clara y un lugar fijo. Si una pieza no se usa al menos una vez por semana, guárdala. El espacio libre también forma parte del diseño.
+
+Si quieres afinar la iluminación, hemos escrito sobre [cómo elegir una luz cálida](/decoracion/luz-calida-decoracion/).
+`,
+  },
+  {
+    titulo: "Cómo elegir una alfombra para el salón: medidas, material y color",
+    slug: "elegir-alfombra-salon",
+    categoria: "guias-de-compra",
+    extracto: "Lo que conviene medir y mirar antes de comprar una alfombra que no se quede corta ni sobre.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-alfombra-salon.jpg",
+    imagenPrincipalAlt: "Salón en tonos neutros con alfombra de fibras naturales y mesa de madera",
+    imagenPinterest: "/images/article-alfombra-salon-pin.jpg",
+    tituloPinterest: "Cómo elegir una alfombra para el salón",
+    descripcionSeo:
+      "Guía de compra para elegir alfombra de salón: medidas, materiales, colores, grosor y mantenimiento sin equivocarte.",
+    etiquetas: ["alfombras", "salón", "guías de compra", "decoración"],
+    contenido: `
+## Primero, mide la zona
+
+La mayoría de las alfombras que no funcionan fallan por tamaño, no por diseño. Antes de mirar modelos, dibuja el espacio con cinta de pintor en el suelo y comprueba cómo se mueve la estancia alrededor.
+
+Mide el sofá, la mesa de centro y la distancia a las paredes. Si la alfombra va debajo de la mesa, debe sobresalir al menos 60 centímetros por cada lado para que las sillas no se enganchen al moverlas.
+
+## Tamaños que funcionan
+
+- **Salón pequeño**: 160 × 230 cm suele bastar para agrupar sofá y mesa de centro.
+- **Salón mediano**: 200 × 300 cm permite que las patas delanteras del sofá queden sobre la alfombra.
+- **Salón amplio**: 250 × 350 cm o más, si quieres cubrir toda la zona de estar.
+- **Comedor**: la alfombra debe extenderse 60–70 cm más allá de la mesa por cada lado.
+- **Pasillo**: un ancho de 80–100 cm deja margen a ambos lados.
+
+Una alfombra pequeña bajo la mesa de centro puede verse como un parche. Si el presupuesto no llega a la medida ideal, a veces es mejor no poner alfombra que poner una que se quede corta.
+
+## Material: lana, yute, algodón o sintético
+
+La lana es cálida, duradera y aísla del ruido; también es la opción más cara y requiere cuidado. El yute y el sisal son resistentes y económicos, pero ásperos y poco cómodos para estar descalzo. El algodón es lavable y informal, ideal para zonas de paso. Las fibras sintéticas resisten bien y son fáciles de limpiar, aunque pueden generar electricidad estática.
+
+Para un salón con sofá y mesa, una mezcla de lana y algodón o una lana de pelo corto suele ser el mejor equilibrio entre confort, durabilidad y mantenimiento.
+
+## Color y patrón
+
+Los tonos claros amplían y aportan calma; los oscuros recogen y dan calidez, pero muestran más el polvo. Un patrón discreto disimula mejor las manchas que un color liso, sobre todo en casas con niños o mascotas.
+
+Si el salón ya tiene mucha textura, elige una alfombra lisa. Si es muy neutro, un patrón suave añade interés sin romper la paleta.
+
+## Grosor y puertas
+
+Una alfombra de pelo alto es agradable, pero puede rozar puertas y dificultar el paso de sillas. Mide la altura libre de las puertas y el hueco bajo el sofá. Para zonas de mucho tránsito, un pelo corto o plano es más práctico.
+
+## Cómo limpiarla
+
+Pasa la aspiradora con regularidad, sin cepillar demasiado las fibras naturales. Limpia las manchas con un paño limpio desde el borde hacia el centro y evita frotar. Las alfombras de lana agradecen una limpieza profesional cada uno o dos años.
+
+Usa siempre una base antideslizante, sobre todo en suelos de madera o baldosa. Además de seguridad, evita que la alfombra se deforme.
+
+<Callout type="info">Antes de pagar, comprueba la política de devolución y si la alfombra se puede limpiar en casa. Una pieza grande es difícil de devolver por mensajería.</Callout>
+
+## Antes de pagar
+
+Mide dos veces, elige el material según el uso real y desconfía de las alfombras muy baratas de pelo largo: suelen perder fibra y aplanarse en pocos meses. Una alfombra que dura diez años sale más a cuenta que tres que duran tres.
+`,
+  },
+  {
+    titulo: "Cómo elegir sábanas: tejido, gramaje y talla",
+    slug: "elegir-sabanas",
+    categoria: "guias-de-compra",
+    extracto: "Algodón, lino o percal: qué mirar en la etiqueta para dormir mejor y no pagar de más.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-sabanas.jpg",
+    imagenPrincipalAlt: "Cama con ropa de cama de lino en tonos neutros y mesilla de madera",
+    imagenPinterest: "/images/article-sabanas-pin.jpg",
+    tituloPinterest: "Cómo elegir sábanas: tejido, gramaje y talla",
+    descripcionSeo:
+      "Guía de compra de sábanas: cómo medir la cama, elegir algodón o lino, entender el gramaje y cuidar el tejido.",
+    etiquetas: ["sábanas", "textiles", "guías de compra", "dormitorio"],
+    contenido: `
+## La talla manda
+
+Antes de mirar tejidos, mide el colchón: ancho, largo y grosor. Una cama de 150 cm no usa las mismas sábanas que una de 160, y un colchón grueso necesita una bajera con más fondo.
+
+Comprueba la altura de la bajera ajustable. Si el colchón mide 30 cm de alto, necesitas una bajera con fondo de al menos 35 cm. Si queda justa, se soltará por las esquinas durante la noche.
+
+## Algodón: largo de fibra y gramaje
+
+El algodón es el tejido más versátil. La calidad depende sobre todo del largo de la fibra: las fibras largas (como el algodón egipcio o pima) son más suaves, resistentes y duran más que las cortas.
+
+El gramaje indica el peso por metro cuadrado. Para sábanas, un tejido de 120–160 g/m² es ligero y fresco; a partir de 170 g/m² se nota más cuerpo y abriga. No es mejor cuanto más pesado: depende de la estación y de cómo duermas.
+
+## Lino y mezclas
+
+El lino es fresco, transpirable y muy duradero, pero arruga y al principio puede resultar áspero. Con los lavados se suaviza. Una mezcla de lino y algodón conserva parte de esa frescura con menos arrugas y un precio más contenido.
+
+Si buscas sábanas para todo el año, el algodón de gramaje medio es la apuesta más segura. Si sudas mucho en verano, el lino o el percal ligero funcionan mejor.
+
+## Percal y satén
+
+El percal es un tejido de trama sencilla, fresco y mate. El satén tiene un brillo suave y una caída más fluida, pero suele ser más delicado y resbaladizo. Ninguno es mejor en abstracto: el percal es más práctico para el día a día; el satén, más suave al tacto.
+
+## Hilos, gramaje y mitos
+
+El famoso «número de hilos» no lo dice todo. Un tejido de 300 hilos con fibra corta puede ser peor que uno de 200 con fibra larga. Además, algunas etiquetas cuentan hilos de formas que no son comparables entre marcas.
+
+Mira la composición, el gramaje y el tipo de fibra antes que la cifra grande de la etiqueta. Y desconfía de las sábanas que prometen suavidad extrema a precio muy bajo: suelen mezclar fibra corta con acabados que se pierden al lavar.
+
+<Callout type="warning">No compres sábanas sin saber la altura de tu colchón. Una bajera ajustable demasiado justa es la causa más común de que la cama se deshaga cada noche.</Callout>
+
+## Cuidado y duración
+
+Lava las sábanas a 30–40 °C, con detergente suave y sin exceso de suavizante, que reduce la transpirabilidad. Seca al aire si puedes y plancha mientras estén ligeramente húmedas.
+
+Alterna dos juegos para que cada uno descanse y se lave con menos frecuencia. Un buen juego de sábanas, cuidado con calma, puede durar muchos años.
+`,
+  },
+  {
     titulo: "Cómo cuidar los muebles de madera para que duren (y se vean mejor)",
     slug: "cuidar-muebles-madera",
     categoria: "ideas-practicas",

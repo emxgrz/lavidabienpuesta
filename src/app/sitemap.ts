@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/aviso-legal/`, lastModified: now },
     { url: `${siteConfig.url}/politica-de-privacidad/`, lastModified: now },
     { url: `${siteConfig.url}/politica-de-cookies/`, lastModified: now },
-    { url: `${siteConfig.url}/divulgacion-de-afiliados/`, lastModified: now },
     { url: `${siteConfig.url}/buscar/`, lastModified: now },
     ...categories.map((category) => ({ url: `${siteConfig.url}/${category.slug}/`, lastModified: now })),
     ...articles.map((article) => ({ url: `${siteConfig.url}/${article.categoria}/${article.slug}/`, lastModified: new Date(article.fechaActualizacion ?? article.fechaPublicacion) })),
