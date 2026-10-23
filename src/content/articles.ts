@@ -21,6 +21,139 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    titulo: "Cómo decorar un salón en tonos neutros sin que parezca frío",
+    slug: "salon-tonos-neutros-calido",
+    categoria: "decoracion",
+    extracto: "Texturas, madera y un acento de color: las capas que convierten un salón claro en un lugar acogedor.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-salon-neutro.jpg",
+    imagenPrincipalAlt: "Salón en tonos neutros con sofá beige, cojines verdes y cortinas de lino",
+    imagenPinterest: "/images/article-salon-neutro-pin.jpg",
+    tituloPinterest: "Cómo dar calidez a un salón en tonos neutros",
+    descripcionSeo:
+      "Ideas de decoración para dar calidez a un salón en tonos neutros con texturas, madera, luz cálida y pequeños acentos de color.",
+    etiquetas: ["salón", "tonos neutros", "decoración", "calidez"],
+    contenido: `
+## El color no es el problema
+
+Cuando un salón en tonos neutros parece frío, casi nunca es culpa del beige o del blanco. El problema suele ser la falta de capas: superficies lisas, luz uniforme y objetos sin textura. El neutro no enfría; lo hace la ausencia de contraste y de materia.
+
+Antes de pintar o comprar muebles, prueba a añadir capas. Es más barato, más reversible y casi siempre funciona.
+
+## Empieza por las texturas
+
+La textura es lo que hace que un color plano se perciba cálido. En un salón neutro, mezcla al menos tres familias:
+
+- **Fibras naturales**: lino, algodón grueso, yute, mimbre.
+- **Pelo o lana**: una manta, un cojín de bouclé, una alfombra de pelo corto.
+- **Cerámica y madera**: superficies mate que absorben la luz en lugar de reflejarla.
+
+No hace falta que todo combine. Un cojín de lino arrugado junto a una manta de lana y una alfombra de yute crea más calidez que cualquier color.
+
+## La madera calienta cualquier paleta
+
+Un mueble de madera natural —roble, olmo, nogal claro— aporta temperatura sin romper la armonía. Si el salón es muy blanco, empieza por un objeto de madera visible: una mesa de centro, una estantería baja, un marco.
+
+Evita mezclar demasiados tonos de madera en la misma estancia. Dos como máximo: uno claro y otro medio. El resto puede ser negro mate, ratán o cerámica.
+
+## Un acento de color, no cinco
+
+Los neutros admiten color, pero piden jerarquía. Elige un solo acento y repítelo en tres puntos: un cojín, un jarrón, un libro. Terracota, ocre, verde salvia o azul apagado funcionan bien porque tienen pigmento y no compiten entre sí.
+
+<Callout type="info">Si dudas, mira la paleta desde la puerta. Si el acento aparece más de tres veces, deja de ser un acento y empieza a ser un tema.</Callout>
+
+## La luz hace la mitad del trabajo
+
+Una lámpara de techo encendida a media tarde aplana la estancia. Mejor varias fuentes bajas y cálidas: una lámpara de pie, una de mesa y una luz indirecta detrás de un mueble. La luz rasante revela texturas y crea sombras suaves, que es justo lo que un salón neutro necesita para no parecer una sala de espera.
+
+## Objetos que cuentan algo
+
+Un salón neutro se vuelve personal cuando los objetos tienen historia: libros de segunda mano, una bandeja heredada, cerámica de un viaje, una planta que lleva años. No hacen falta muchos; bastan tres o cuatro bien colocados.
+
+Lo que sí conviene evitar es llenar los huecos. Un estante con aire respira mejor que uno completo, y el aire también es una textura.
+
+## El orden también decora
+
+Un salón despejado se percibe más cálido porque deja ver los materiales. Recoge los cables, elige una sola bandeja para los mandos y deja una superficie vacía. El orden no compite con la decoración: la deja hablar.
+
+## Un salón neutro y habitado
+
+La calidez no se compra en un solo pedido. Se construye con una manta que invita a sentarse, una lámpara que se enciende al caer la tarde y un objeto que solo tiene sentido ahí.
+
+Si quieres seguir afinando la luz, hemos escrito sobre [cómo elegir una luz cálida sin equivocarte](/decoracion/luz-calida-decoracion/).
+`,
+  },
+  {
+    titulo: "La luz cálida cambia una habitación: cómo elegirla sin equivocarte",
+    slug: "luz-calida-decoracion",
+    categoria: "decoracion",
+    extracto: "Temperatura, pantallas y altura: tres decisiones sencillas para que la casa se vea (y se sienta) mejor de noche.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-luz-calida.jpg",
+    imagenPrincipalAlt: "Salón con lámpara de pie encendida, sofá claro y cojines terracota",
+    imagenPinterest: "/images/article-luz-calida-pin.jpg",
+    tituloPinterest: "Cómo elegir una luz cálida en casa",
+    descripcionSeo:
+      "Guía de decoración para elegir luz cálida en casa: temperatura de color, pantallas, capas de iluminación y errores que conviene evitar.",
+    etiquetas: ["iluminación", "luz cálida", "decoración", "ambiente"],
+    contenido: `
+## Qué es la luz cálida (y qué no)
+
+La luz cálida es la que tiene una temperatura de color baja, entre 2.200 y 3.000 K. Se parece a la luz de una vela o a la de una bombilla incandescente, y es la que hace que la madera, el lino y la pintura crema se vean como son.
+
+No es lo mismo que luz tenue. Una bombilla cálida puede ser muy potente y seguir siendo cálida; una luz fría puede ser débil y seguir pareciendo de oficina.
+
+## La temperatura de color, en números sencillos
+
+- **2.200–2.700 K**: ámbar, muy cálida. Ideal para rincones, dormitorios y lámparas de mesa.
+- **3.000 K**: blanco cálido. El punto medio para salones, comedores y cocinas.
+- **4.000 K**: blanco neutro. Útil en baños y zonas de trabajo, pero frío para descansar.
+- **5.000–6.500 K**: luz de día. Mejor reservarla para tareas concretas, no para toda la casa.
+
+Para una estancia de descanso, 2.700 K es casi siempre una apuesta segura. Si el espacio es de paso o se usa para leer, 3.000 K da algo más de claridad sin perder calidez.
+
+## La pantalla importa tanto como la bombilla
+
+Una bombilla cálida detrás de una pantalla blanca y brillante sigue deslumbrando. Las pantallas de lino, papel o tela difuminan la luz y reparten el calor por la pared.
+
+- Elige pantallas opacas o translúcidas, nunca transparentes.
+- Prefiere tonos crema, arena o blanco roto.
+- Comprueba que la bombilla no se vea desde ningún ángulo habitual.
+
+## Tres puntos de luz, no una lámpara gigante
+
+Una sola fuente en el techo crea sombras duras y aplana la habitación. Reparte la luz en tres niveles:
+
+1. **General**: una luz suave en el techo o una lámpara de pie que ilumine el conjunto.
+2. **De apoyo**: una lámpara de mesa junto al sofá o en la consola.
+3. **Ambiente**: una luz baja detrás de una planta o un mueble, o una vela LED.
+
+No hace falta encenderlas todas. La gracia es poder elegir.
+
+## Altura y dirección
+
+La luz debe llegar a la altura de los ojos, no desde arriba. Una lámpara de pie con el brazo a la altura del hombro ilumina un libro sin deslumbrar. Una lámpara de mesa debe quedar por debajo de la mirada cuando estás sentado.
+
+<Callout type="warning">Desconfía de las bombillas de luz fría en dormitorios y salones. A 5.000 K o más, el cuerpo sigue leyendo «mediodía» y cuesta más entrar en modo descanso.</Callout>
+
+## Regulable o nada
+
+Si puedes, elige bombillas y lámparas regulables. Bajar la intensidad por la noche cambia por completo la sensación de la casa, y no obliga a cambiar de lámpara. Comprueba que el regulador sea compatible con LED.
+
+## Un rincón de lectura bien resuelto
+
+Un sillón, una lámpara de pie y una mesa pequeña. La luz debe caer sobre el libro, no sobre los ojos. Si el sillón está junto a una ventana, coloca la lámpara del lado contrario a la mano que sostiene el libro para no hacer sombra.
+
+## Menos luz, mejor luz
+
+La tentación es iluminar todo. Pero las casas se sienten más acogedoras cuando hay zonas en penumbra y focos claros. Apaga la luz general, enciende una lámpara y observa cómo cambia la habitación: eso es la luz cálida haciendo su trabajo.
+
+Si además tu salón es de tonos claros, tenemos ideas para [darle calidez sin llenarlo de cosas](/decoracion/salon-tonos-neutros-calido/).
+`,
+  },
+  {
     titulo: "El recibidor que trabaja para ti: cinco capas de orden en la entrada",
     slug: "recibidor-ordenado-cinco-capas",
     categoria: "orden-y-organizacion",
@@ -212,7 +345,7 @@ Para este tipo de armario, una selección útil puede incluir separadores, cajas
     fechaPublicacion: "2026-10-12",
     autor: "La Vida Bien Puesta",
     imagenPrincipal: "/images/article-despensa.jpg",
-    imagenPrincipalAlt: "Despensa con tarros de cristal y cestas",
+    imagenPrincipalAlt: "Tarros de cristal con legumbres sobre una mesa de madera",
     imagenPinterest: "/images/article-despensa-pin.jpg",
     tituloPinterest: "5 ideas para una despensa más ordenada",
     descripcionSeo:
