@@ -21,6 +21,146 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    titulo: "Cómo cuidar los muebles de madera para que duren (y se vean mejor)",
+    slug: "cuidar-muebles-madera",
+    categoria: "ideas-practicas",
+    extracto: "Polvo, humedad y sol: una rutina sencilla para mantener la madera bonita sin productos agresivos.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-muebles-madera.jpg",
+    imagenPrincipalAlt: "Detalle de patas de madera barnizada sobre una superficie de roble",
+    imagenPinterest: "/images/article-muebles-madera-pin.jpg",
+    tituloPinterest: "Cómo cuidar los muebles de madera",
+    descripcionSeo:
+      "Rutina práctica para limpiar y cuidar muebles de madera: polvo, humedad, sol, manchas y cuándo usar aceite o cera.",
+    etiquetas: ["madera", "muebles", "limpieza", "mantenimiento"],
+    contenido: `
+## Antes de limpiar, mira el acabado
+
+La madera no se cuida igual si está barnizada, lacada, aceitada o encerada. El barniz y la laca forman una película que protege la superficie; el aceite y la cera penetran en la fibra. Confundir los productos es la forma más rápida de estropear un mueble que estaba bien.
+
+Si no sabes qué acabado tiene, prueba en una zona oculta. Una gota de agua que se queda en la superficie indica una película de barniz o laca. Si se absorbe y oscurece la madera, probablemente esté aceitada o sin tratar.
+
+## El polvo, con un paño seco
+
+El polvo se retira con un paño de microfibra seco o muy ligeramente humedecido. Pasa la mano sin apretar, siguiendo la veta, y sacude el paño con frecuencia. La arena y las partículas duras son las que rayan: cuanto menos las arrastres, mejor.
+
+Evita los sprays directos sobre la superficie. Si usas un producto, aplícalo primero en el paño y trabaja por zonas pequeñas.
+
+## La humedad, en su justa medida
+
+La madera respira y se mueve con los cambios de humedad. Un ambiente muy seco puede abrir grietas; uno muy húmedo hincha la fibra y levanta el acabado. En casa, mantener una humedad estable entre el 40 y el 60 % protege más que cualquier producto.
+
+- Seca inmediatamente cualquier derrame.
+- No coloques muebles de madera pegados a paredes húmedas o radiadores.
+- Ventila después de cocinar o ducharte.
+
+## El sol y el calor
+
+Los rayos UV alteran el color de la madera y de los barnices. No hace falta vivir a oscuras: basta con evitar que el sol directo golpee siempre la misma zona. Baja las persianas en las horas centrales o mueve ligeramente los objetos de sitio de vez en cuando.
+
+El calor también cuenta. Un radiador encendido a pocos centímetros reseca la madera y puede agrietar los ensambles. Si no puedes cambiar el mueble de lugar, al menos deja una separación y mantén la humedad controlada.
+
+## Manchas: primero, no frotar
+
+Ante un derrame, retira el exceso con papel absorbente sin extenderlo. Después pasa un paño limpio apenas humedecido y seca enseguida. Frotar con fuerza empuja la mancha hacia la fibra y puede levantar el acabado.
+
+Para manchas de grasa, un poco de agua tibia con jabón neutro suele bastar. Para marcas de vasos o aros, deja actuar un paño tibio y seca bien; si no desaparece, consulta a un restaurador antes de probar remedios caseros.
+
+<Callout type="warning">Nunca uses alcohol, acetona, limpiacristales con amoniaco ni estropajos metálicos sobre la madera. Tampoco aceites de cocina: con el tiempo se vuelven rancios y atraen polvo.</Callout>
+
+## Aceite o cera: solo si el mueble lo pide
+
+Los muebles barnizados o lacados no necesitan cera; de hecho, la cera puede acumularse y apagar el acabado. Los muebles aceitados sí agradecen una capa fina de aceite específico una o dos veces al año. Los encerados, una capa de cera neutra.
+
+Aplica siempre una cantidad mínima, extiende con un paño limpio y retira el exceso. Es mejor dos capas finas que una gruesa. Y no trates un mueble recién limpiado con productos agresivos: la madera necesita estar seca y limpia.
+
+## Una rutina de dos minutos
+
+Polvo una vez por semana, revisión de humedad y sol una vez al mes, y tratamiento específico una o dos veces al año. Esa es toda la rutina. La madera no pide prisa; pide constancia.
+
+## La madera mejora con los años
+
+Un mueble bien cuidado gana pátina y carácter. Las pequeñas marcas del uso no son un defecto: forman parte de su historia. El objetivo no es tenerlo como el primer día, sino que siga siendo agradable de usar y de mirar dentro de veinte años.
+`,
+  },
+  {
+    titulo: "La colada de la ropa blanca: cómo mantenerla blanca sin castigarla",
+    slug: "colada-ropa-blanca",
+    categoria: "ideas-practicas",
+    extracto: "Separar, dosificar y secar bien: lo que de verdad funciona para que el blanco no se vuelva gris.",
+    fechaPublicacion: "2026-10-23",
+    autor: "La Vida Bien Puesta",
+    imagenPrincipal: "/images/article-ropa-blanca.jpg",
+    imagenPrincipalAlt: "Pila de toallas claras dobladas sobre un taburete blanco",
+    imagenPinterest: "/images/article-ropa-blanca-pin.jpg",
+    tituloPinterest: "Cómo lavar la ropa blanca sin amarillearla",
+    descripcionSeo:
+      "Guía práctica para lavar ropa blanca: separación, temperaturas, detergente, manchas y secado sin amarillear las prendas.",
+    etiquetas: ["colada", "ropa blanca", "limpieza", "hogar"],
+    contenido: `
+## El blanco no se ensucia solo: se contamina
+
+Cuando una camiseta blanca empieza a verse gris, casi nunca es por una mancha concreta. Es el resultado de muchas coladas pequeñas: partículas de otras prendas, detergente mal aclarado y tejidos que han perdido luminosidad.
+
+La solución no es lavar más fuerte, sino lavar mejor. Separar, dosificar y aclarar bien hace más por el blanco que cualquier producto milagroso.
+
+## Separa por tejido y por grado de blancura
+
+No todas las prendas blancas son iguales. El algodón resiste más que la seda o la lana, y una camiseta nueva puede soltar color en las primeras coladas. Separa al menos en tres grupos:
+
+- **Blancos resistentes**: algodón, toallas, sábanas, camisetas.
+- **Blancos delicados**: seda, lana, encaje, prendas con bordados.
+- **Blancos deportivos**: tejidos técnicos, que no admiten calor alto.
+
+Lava juntos solo prendas de blancura similar. Una toalla vieja y grisácea puede apagar una camisa recién comprada.
+
+## Temperatura: más caliente no siempre es mejor
+
+El agua caliente ayuda con la grasa y las manchas, pero también desgasta las fibras y fija algunas manchas de proteína. La etiqueta manda.
+
+- **30 °C**: ropa blanca de uso diario y tejidos delicados.
+- **40 °C**: algodón y ropa de cama, si la etiqueta lo permite.
+- **60 °C**: toallas y sábanas cuando necesitas higienizar.
+
+Si dudas, empieza por 30 o 40 °C. Lavar a 60 °C todo el armario acorta la vida de las prendas y no siempre mejora el resultado.
+
+## Detergente: dosifica y no llenes la cubeta
+
+Más detergente no significa más limpieza. El exceso se queda en la fibra, atrae suciedad y hace que el blanco se vea apagado. Usa la dosis indicada para tu agua y tu carga, y no llenes la lavadora hasta el borde: la ropa necesita moverse.
+
+Si el agua de tu zona es muy dura, un poco de detergente extra puede ayudar, pero conviene revisar también el filtro y hacer un ciclo de limpieza de la máquina de vez en cuando.
+
+## Oxígeno activo en lugar de lejía
+
+La lejía con cloro blanquea, sí, pero también amarillea tejidos sintéticos, lana y seda, y castiga el algodón con el uso. Para mantener el blanco, el oxígeno activo es una opción más amable.
+
+Añádelo según las instrucciones del fabricante, preferiblemente en coladas de 40 °C o más, y no lo mezcles con otros productos. Funciona mejor como mantenimiento que como rescate de una prenda muy amarillenta.
+
+## Manchas: actúa antes de lavar
+
+Cuanto antes actúes, menos tendrás que forzar la colada. Retira el exceso con papel absorbente, aclara con agua fría si es una mancha de proteína (sangre, huevo, leche) y aplica un poco de detergente líquido antes de lavar.
+
+No frotes con fuerza ni uses agua caliente al principio: el calor puede fijar la mancha. Si no sale a la primera, deja secar y vuelve a intentarlo; no metas la prenda en la secadora hasta que la mancha haya desaparecido.
+
+<Callout type="info">Las toallas blancas no necesitan suavizante. El suavizante deja una película que reduce la absorción y, con el tiempo, apaga el color. Un poco de vinagre en el aclarado ayuda a eliminar restos de detergente.</Callout>
+
+## Secado y planchado
+
+El sol directo ayuda a mantener el blanco, pero puede amarillear algunos sintéticos si se deja demasiado tiempo. Seca al aire libre las prendas de algodón y reserva la secadora para lo que necesites suavizar, con una temperatura moderada.
+
+Plancha mientras la prenda esté ligeramente húmeda o usa vapor. El calor excesivo sobre una mancha residual la fija para siempre.
+
+## Una rutina semanal
+
+Una colada de blancos por semana, con la carga bien separada y la dosis justa, evita la acumulación de grises. Revisa antes de lavar los bolsillos y las manchas visibles. Y no laves una prenda blanca solo porque ha quedado un hueco en la lavadora: espera a tener un grupo coherente.
+
+## El blanco no tiene que ser perfecto
+
+Con el tiempo, el blanco cambia. No hace falta perseguir un blanco de escaparate ni renovar el armario cada temporada. Cuidar bien las prendas que ya tienes es más sostenible, más barato y casi siempre queda mejor que comprar una camiseta nueva para sustituir otra que solo estaba un poco apagada.
+`,
+  },
+  {
     titulo: "Cómo decorar un salón en tonos neutros sin que parezca frío",
     slug: "salon-tonos-neutros-calido",
     categoria: "decoracion",

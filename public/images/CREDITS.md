@@ -15,6 +15,10 @@ como cortesía y para poder rastrear su procedencia.
 | `article-luz-calida-pin.jpg` | <https://www.pexels.com/photo/33661398/> | yu xin |
 | `article-despensa.jpg` | <https://www.pexels.com/photo/8287244/> | Ron Lach |
 | `article-despensa-pin.jpg` | <https://www.pexels.com/photo/6654106/> | Arina Krasnikova |
+| `article-muebles-madera.jpg` | <https://www.pexels.com/photo/37178407/> | Pew Nguyen |
+| `article-muebles-madera-pin.jpg` | <https://www.pexels.com/photo/19052812/> | Sabine Fischer |
+| `article-ropa-blanca.jpg` | <https://www.pexels.com/photo/4210372/> | Kaboompics.com |
+| `article-ropa-blanca-pin.jpg` | <https://www.pexels.com/photo/10565604/> | Ron Lach |
 
 Las versiones `-pin` son recortes verticales (1000 × 1500 px) de la misma foto,
 preparados para Pinterest. Las principales están recortadas a 1600 × 900 px.
