@@ -41,8 +41,8 @@ export default function CookiesPage() {
           <h2 className="pt-4 text-2xl font-semibold text-black">3. Servicios de terceros</h2>
           <p>
             El Sitio no carga servicios de terceros que instalen cookies de forma automática. Si en el futuro se
-            incorporan vídeos incrustados, mapas, boletines o enlaces de afiliado, esta política se actualizará
-            antes de su activación y, cuando sea necesario, se solicitará el consentimiento correspondiente.
+            incorporan vídeos incrustados, mapas o boletines, esta política se actualizará antes de su activación
+            y, cuando sea necesario, se solicitará el consentimiento correspondiente.
           </p>
           <p>
             Los enlaces a páginas externas (por ejemplo, tiendas o medios) solo se abren cuando el usuario hace
